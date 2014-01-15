@@ -122,7 +122,7 @@ task :build => [:clean, :create, :importworld, :importbeer] do
 end
 
 desc 'update beer.db'
-task :update => [:deletesport, :importbeer] do
+task :update => [:deletebeer, :importbeer] do
   puts 'Done.'
 end
 
