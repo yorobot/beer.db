@@ -25,6 +25,8 @@ WORLD_DB_INCLUDE_PATH = "#{OPENMUNDI_ROOT}/world.db"
 
 WORLD_INCLUDE_PATH            = "#{OPENBEER_ROOT}/world"
 AT_INCLUDE_PATH               = "#{OPENBEER_ROOT}/at-austria"
+IE_INCLUDE_PATH               = "#{OPENBEER_ROOT}/ie-ireland"
+MX_INCLUDE_PATH               = "#{OPENBEER_ROOT}/mx-mexico"
 
 
 
@@ -44,6 +46,8 @@ settings:
 
   WORLD_INCLUDE_PATH:        #{WORLD_INCLUDE_PATH}
   AT_INCLUDE_PATH:           #{AT_INCLUDE_PATH}
+  IE_INCLUDE_PATH:           #{IE_INCLUDE_PATH}
+  MX_INCLUDE_PATH:           #{MX_INCLUDE_PATH}
 *****************
 EOS
 
@@ -100,13 +104,20 @@ task :at => :importbuiltin do
   BeerDb.read_setup( 'setups/all', AT_INCLUDE_PATH )
 end
 
+task :ie => :importbuiltin do
+  BeerDb.read_setup( 'setups/all', IE_INCLUDE_PATH )
+end
+
+task :mx => :importbuiltin do
+  BeerDb.read_setup( 'setups/all', MX_INCLUDE_PATH )
+end
 
 
 
 #########################################################
 # note: change deps to what you want to import for now
 
-task :importbeer => [:at] do
+task :importbeer => [:ie] do
   # BeerDb.stats
 end
 
