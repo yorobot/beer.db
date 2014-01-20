@@ -166,7 +166,7 @@ end
 #########################################################
 # note: change deps to what you want to import for now
 
-task :importbeer => [:de] do
+task :importbeer => [:be] do
   # BeerDb.stats
 end
 
