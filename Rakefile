@@ -27,7 +27,10 @@ WORLD_INCLUDE_PATH            = "#{OPENBEER_ROOT}/world"
 
 AT_INCLUDE_PATH               = "#{OPENBEER_ROOT}/at-austria"
 IE_INCLUDE_PATH               = "#{OPENBEER_ROOT}/ie-ireland"
+BE_INCLUDE_PATH               = "#{OPENBEER_ROOT}/be-belgium"
+NL_INCLUDE_PATH               = "#{OPENBEER_ROOT}/nl-netherlands"
 
+CA_INCLUDE_PATH               = "#{OPENBEER_ROOT}/ca-canada"
 US_INCLUDE_PATH               = "#{OPENBEER_ROOT}/us-united-states"
 MX_INCLUDE_PATH               = "#{OPENBEER_ROOT}/mx-mexico"
 
@@ -52,6 +55,9 @@ settings:
   WORLD_INCLUDE_PATH:        #{WORLD_INCLUDE_PATH}
   AT_INCLUDE_PATH:           #{AT_INCLUDE_PATH}
   IE_INCLUDE_PATH:           #{IE_INCLUDE_PATH}
+  BE_INCLUDE_PATH:           #{BE_INCLUDE_PATH}
+  NL_INCLUDE_PATH:           #{NL_INCLUDE_PATH}
+  CA_INCLUDE_PATH:           #{CA_INCLUDE_PATH}
   US_INCLUDE_PATH:           #{US_INCLUDE_PATH}
   MX_INCLUDE_PATH:           #{MX_INCLUDE_PATH}
   JP_INCLUDE_PATH:           #{JP_INCLUDE_PATH}
@@ -115,6 +121,18 @@ task :ie => :importbuiltin do
   BeerDb.read_setup( 'setups/all', IE_INCLUDE_PATH )
 end
 
+task :be => :importbuiltin do
+  BeerDb.read_setup( 'setups/all', BE_INCLUDE_PATH )
+end
+
+task :nl => :importbuiltin do
+  BeerDb.read_setup( 'setups/all', NL_INCLUDE_PATH )
+end
+
+task :ca => :importbuiltin do
+  BeerDb.read_setup( 'setups/all', CA_INCLUDE_PATH )
+end
+
 task :us => :importbuiltin do
   BeerDb.read_setup( 'setups/all', US_INCLUDE_PATH )
 end
@@ -130,7 +148,7 @@ end
 #########################################################
 # note: change deps to what you want to import for now
 
-task :importbeer => [:us] do
+task :importbeer => [:world] do
   # BeerDb.stats
 end
 
