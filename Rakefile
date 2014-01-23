@@ -124,7 +124,8 @@ task :de => :importbuiltin do
 end
 
 task :at => :importbuiltin do
-  BeerDb.read_setup( 'setups/all', AT_INCLUDE_PATH )
+  ## BeerDb.read_setup( 'setups/all', AT_INCLUDE_PATH )
+  BeerDb.read_setup( 'setups/test', AT_INCLUDE_PATH )
 end
 
 task :ch => :importbuiltin do
@@ -166,7 +167,7 @@ end
 #########################################################
 # note: change deps to what you want to import for now
 
-task :importbeer => [:be] do
+task :importbeer => [:at] do
   # BeerDb.stats
 end
 
