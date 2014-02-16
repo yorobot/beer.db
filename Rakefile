@@ -105,8 +105,8 @@ end
 task :importworld => :env do
   # populate world tables
   WorldDb.read_setup( 'setups/sport.db.admin', WORLD_DB_INCLUDE_PATH, skip_tags: true )
-  # WorldDb.stats
 end
+
 
 task :importbuiltin => :env do
   # BeerDb.read_builtin
@@ -193,8 +193,59 @@ task :pull => :env do
   puts 'Done.'
 end
 
+desc 'build book (draft version) - The Free World Beer Book - from beer.db'
+task :book => :env do
 
-task :about do
-  # todo: print versions of gems etc.
+  PAGES_DIR = "#{BUILD_DIR}/pages"  # use PAGES_OUTPUT_DIR or PAGES_ROOT ??
+
+  require './scripts/book'
+
+
+  build_book()                # multi-page version
+  ## build_book( inline: true )  # all-in-one-page version a.k.a. inline version
+
+  puts 'Done.'
 end
+
+
+desc 'build book (release version) - The Free World Beer Book - from beer.db'
+task :publish => :env do
+
+  PAGES_DIR = "../book/_pages"  # use PAGES_OUTPUT_DIR or PAGES_ROOT ??
+
+  require './scripts/book'
+
+  build_book()                # multi-page version
+  ## build_book( inline: true )  # all-in-one-page version a.k.a. inline version
+
+  puts 'Done.'
+end
+
+
+desc 'print versions of gems'
+task :about => :env do
+  puts ''
+  puts 'gem versions'
+  puts '============'
+  puts "textutils #{TextUtils::VERSION}     (#{TextUtils.root})"
+  puts "worlddb   #{WorldDb::VERSION}     (#{WorldDb.root})"
+  puts "beerdb    #{BeerDb::VERSION}     (#{BeerDb.root})"
+
+  ## todo - add LogUtils  LogDb ??  - check for .root too
+end
+
+
+desc 'print stats for beer.db tables/records'
+task :stats => :env do
+  puts ''
+  puts 'world.db'
+  puts '========'
+  WorldDb.tables
+
+  puts ''
+  puts 'beer.db'
+  puts '======='
+  BeerDb.tables
+end
+
 
