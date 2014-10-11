@@ -81,7 +81,7 @@ def search_city( city )
   puts "content-length: #{response['content-length']}"
 
   json = response.body
-  pp json[0..100]
+  pp json[0..20]
 
   data = JSON.parse( json )
   puts "data.class.name: #{data.class.name}, data.size: #{data.size}"
@@ -92,7 +92,7 @@ def search_city( city )
 
   if data.size > 0
     if data.size == 1
-      pp data[0]   ## print first entry
+      ## pp data[0]   ## print first entry
       city_rec = CityRecord.new
       city_rec.from_hash( data[0] )
       city_res.rec = city_rec
@@ -101,7 +101,7 @@ def search_city( city )
       ##  for now assumes/works only for one city/place name per region (bundesland/province)
       data.each do |entry|
         if entry['display_name'] =~ /#{city.region_name}/
-          pp entry   ## print first entry
+          ## pp entry   ## print first entry
           city_rec = CityRecord.new
           city_rec.from_hash( entry )
           city_res.rec = city_rec
@@ -247,13 +247,30 @@ cities.each_with_index do |city,i|
     puts "entry found; skipping >#{city.name}<"
   else
     res = search_city( city )
-    pp res
-    
+    ## pp res
+
     cache[ city.name ] = res
 
     sleep( 0.4 )  # wait 400ms
   end
 end
+
+### reorder cache in order of input file
+
+cache2 = {}
+cities.each do |city|
+  entry = cache[city.name]
+  if entry
+    cache2[city.name] = entry
+  else
+    puts "*** warn: no cache entry found for #{city.name}"
+  end
+  
+  ## todo: delete cache entry; at the end dump entries if any remaing w/ warning
+end
+
+
+cache = cache2  # delete old "unordered" cache
 
 save_responses( './geo/at-cities.csv', cache )
 
