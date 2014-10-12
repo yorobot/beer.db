@@ -49,23 +49,62 @@ end
 
 
 task :env => BUILD_DIR do
-  require 'worlddb'   ### NB: for local testing use rake -I ./lib dev:test e.g. do NOT forget to add -I ./lib
+  ## require 'worlddb'   ### NB: for local testing use rake -I ./lib dev:test e.g. do NOT forget to add -I ./lib
   require 'beerdb'
   require 'logutils/db'
-
-  LogUtils::Logger.root.level = :info
 
   pp DB_CONFIG
   ActiveRecord::Base.establish_connection( DB_CONFIG )
 end
 
+
+task :config  => :env do
+  logger = LogUtils::Logger.root
+  # logger.level = :info
+   ## log all warns, errors, fatals to db
+  LogDb.setup
+  logger.warn "Rakefile - #{Time.now}" # say hello; log to db (warn level min)
+end
+
+task :configworld => :config do
+  logger = LogUtils::Logger.root
+  logger.level = :info
+end
+
+task :configbeer => :config do
+  logger = LogUtils::Logger.root
+
+  ## try first
+  ### use DEBUG=t or DEBUG=f
+  ### or alternative LOG|LOGLEVEL=debug|info|warn|error
+
+  debug_key = ENV['DEBUG']
+  if debug_key.nil?
+    ## try log_key as "fallback"
+    ## - env variable that lets you configure log level
+    log_key = ENV['LOG'] || ENV['LOGLEVEL'] || 'debug'
+    puts " using LOGLEVEL >#{log_key}<"
+    logger.level = log_key.to_sym
+  else
+    if ['true', 't', 'yes', 'y'].include?( debug_key.downcase )
+      logger.level = :debug
+    else
+      logger.level = :info
+    end
+  end
+end
+
+
+
 task :create => :env do
   LogDb.create
+  ConfDb.create
+  TagDb.create
   WorldDb.create
   BeerDb.create
 end
 
-task :importworld => :env do
+task :importworld => :configworld do
   # populate world tables
   WorldDb.read_setup( 'setups/sport.db.admin', WORLD_DB_INCLUDE_PATH, skip_tags: true )
 end
@@ -73,65 +112,35 @@ end
 
 task :importbuiltin => :env do
   # BeerDb.read_builtin
-  LogUtils::Logger.root.level = :debug
 end
 
 
-
-task :world => :importbuiltin do
-  BeerDb.read_setup( 'setups/all', WORLD_INCLUDE_PATH )
+############################################
+# add more tasks (keep build script modular)
+Dir.glob('./tasks/**/*.rake').each do |r|
+puts " importing task >#{r}<..."
+import r
+# see blog.smartlogicsolutions.com/2009/05/26/including-external-rake-files-in-your-projects-rakefile-keep-your-rake-tasks-organized/
 end
 
-task :de => :importbuiltin do
-  BeerDb.read_setup( 'setups/all', DE_INCLUDE_PATH )
-end
 
-task :at => :importbuiltin do
-  ## BeerDb.read_setup( 'setups/all', AT_INCLUDE_PATH )
-  BeerDb.read_setup( 'setups/test', AT_INCLUDE_PATH )
-end
-
-task :ch => :importbuiltin do
-  BeerDb.read_setup( 'setups/all', CH_INCLUDE_PATH )
-end
-
-task :cz => :importbuiltin do
-  BeerDb.read_setup( 'setups/all', CZ_INCLUDE_PATH )
-end
-
-task :ie => :importbuiltin do
-  BeerDb.read_setup( 'setups/all', IE_INCLUDE_PATH )
-end
-
-task :be => :importbuiltin do
-  BeerDb.read_setup( 'setups/all', BE_INCLUDE_PATH )
-end
-
-task :nl => :importbuiltin do
-  BeerDb.read_setup( 'setups/all', NL_INCLUDE_PATH )
-end
-
-task :ca => :importbuiltin do
-  BeerDb.read_setup( 'setups/all', CA_INCLUDE_PATH )
-end
-
-task :us => :importbuiltin do
-  BeerDb.read_setup( 'setups/all', US_INCLUDE_PATH )
-end
-
-task :mx => :importbuiltin do
-  BeerDb.read_setup( 'setups/all', MX_INCLUDE_PATH )
-end
-
-task :jp => :importbuiltin do
-  BeerDb.read_setup( 'setups/all', JP_INCLUDE_PATH )
-end
 
 #########################################################
 # note: change deps to what you want to import for now
 
-task :importbeer => [:at] do
-  # BeerDb.stats
+##
+# default to at (if no key given)
+#
+# e.g. use like
+# $ rake update DATA=at or
+# $ rake build DATA=at
+# etc.
+
+DATA_KEY = ENV['DATA'] || ENV['DATASET'] || ENV['FX'] || ENV['FIXTURES'] || 'at'
+puts " using DATA_KEY >#{DATA_KEY}<"
+
+task :importbeer => [:configsport, DATA_KEY.to_sym] do
+  # nothing here
 end
 
 
@@ -150,65 +159,10 @@ task :update => [:deletebeer, :importbeer] do
   puts 'Done.'
 end
 
-desc 'pull (auto-update) beer.db from upstream sources'
-task :pull => :env do
-  BeerDb.update!
-  puts 'Done.'
-end
 
-desc 'build book (draft version) - The Free World Beer Book - from beer.db'
-task :book => :env do
-
-  PAGES_DIR = "#{BUILD_DIR}/pages"  # use PAGES_OUTPUT_DIR or PAGES_ROOT ??
-
-  require './scripts/book'
-
-
-  build_book()                # multi-page version
-  ## build_book( inline: true )  # all-in-one-page version a.k.a. inline version
-
-  puts 'Done.'
-end
-
-
-desc 'build book (release version) - The Free World Beer Book - from beer.db'
-task :publish => :env do
-
-  PAGES_DIR = "../book/_pages"  # use PAGES_OUTPUT_DIR or PAGES_ROOT ??
-
-  require './scripts/book'
-
-  build_book()                # multi-page version
-  ## build_book( inline: true )  # all-in-one-page version a.k.a. inline version
-
-  puts 'Done.'
-end
-
-
-desc 'print versions of gems'
-task :about => :env do
-  puts ''
-  puts 'gem versions'
-  puts '============'
-  puts "textutils #{TextUtils::VERSION}     (#{TextUtils.root})"
-  puts "worlddb   #{WorldDb::VERSION}     (#{WorldDb.root})"
-  puts "beerdb    #{BeerDb::VERSION}     (#{BeerDb.root})"
-
-  ## todo - add LogUtils  LogDb ??  - check for .root too
-end
-
-
-desc 'print stats for beer.db tables/records'
-task :stats => :env do
-  puts ''
-  puts 'world.db'
-  puts '========'
-  WorldDb.tables
-
-  puts ''
-  puts 'beer.db'
-  puts '======='
-  BeerDb.tables
-end
-
+# desc 'pull (auto-update) beer.db from upstream sources'
+# task :pull => :env do
+#  BeerDb.update!
+#  puts 'Done.'
+# end
 
