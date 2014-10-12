@@ -51,6 +51,7 @@ end
 task :env => BUILD_DIR do
   ## require 'worlddb'   ### NB: for local testing use rake -I ./lib dev:test e.g. do NOT forget to add -I ./lib
   require 'beerdb'
+  ## require 'worlddb'
   require 'logutils/db'
 
   pp DB_CONFIG
