@@ -140,7 +140,7 @@ end
 DATA_KEY = ENV['DATA'] || ENV['DATASET'] || ENV['FX'] || ENV['FIXTURES'] || 'at'
 puts " using DATA_KEY >#{DATA_KEY}<"
 
-task :importbeer => [:configsport, DATA_KEY.to_sym] do
+task :importbeer => [:configbeer, DATA_KEY.to_sym] do
   # nothing here
 end
 
