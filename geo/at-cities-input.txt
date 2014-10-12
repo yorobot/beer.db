@@ -1,64 +1,334 @@
+- Wien
+
+### use districts ???
+Wien
+  Ottakring
+  Innere Stadt
+
+  
 - Burgenland
 
-Kobersdorf
+7332 Kobersdorf
 
-Steinberg-Dörfl  ## not working
-Dörfl            ## try
+7453 Steinberg-Dörfl  ##  use Dörfl ??? 
+  Dörfl            ## try
 
-Gols
-Neustift a.d. Lafnitz
+7122 Gols
+7423 Neustift a.d. Lafnitz
 
 - Niederösterreich
 
-Schwechat
-Zwettl
-Unterradlberg
-Wieselburg
+3483 Feuersbrunn
+3483 Wagram/Wagram
+  Grafenwörth
+  Grafenegg
 
-Schrems
-Laa/Thaya
+2534 Alland
+3392 Gerolding
+3072 Kasten    ## use Steinabruck ???
+      Steinabruck
+2822 Bad Erlach  
+3970 Weitra
+2100 Korneuburg
+3170 Hainfeld
+3292 Gaming
+2345 Brunn am Gebirge
+2722 Winzendorf
+2831 Warth
+2284 Untersiebenbrunn
+2851 Krumbach
+2832 Thernberg
+3003 Gablitz
 
-- Vorarlberg
+2320 Schwechat
+3910 Zwettl
+3105 Unterradlberg
+3250 Wieselburg
 
-Egg
-Frastanz
-Dornbirn
-Bludenz
+3943 Schrems
+2136 Laa/Thaya
+
+  2486 Siegersdorf
+  3763 Japons  ## use Zettenreith
+    Zettenreith  
+  2641 Schottwien 
+  3970 Weitra 
+  3121 Karlstetten  ## use Schaubing ??
+    Schaubing
+  3250 Wieselburg
+  3550 Langenlois 
+  2640 Gloggnitz   ##  use Raach am Hochgebirge  ??
+    Raach am Hochgebirge
+  2831 Haßbach 
+  3442 Langenrohr 
+  3160 Traisen
+  3161 St. Veit an der Gölsen
+  2563 Pottenstein
+  3293 Gaming    ## use Kartause ??
+        Kartause
+  3633 Schönbach 
+  2650 Payerbach 
+  3662 Münichreith am Ostrong 
+  3340 Waidhofen/Ybbs 
+  2640 Enzenreith 
+
+- Kärnten
+
+  9640 Kötschach-Mauthen    ## use Mauthen ??
+   Mauthen
+  9311 Kraig                ## use Wimitz  ??
+    Wimitz
+
+  9322 Micheldorf           ## use Hirt ??
+    Hirt
+  9500 Villach
+  9020 Klagenfurt 
+
+  9150 Bleiburg 
+  9556 Liebenfels    ## use Zweikirchen ??
+    Zweikirchen 
+  9132 Gallizien    ## use Pirk ??
+    Pirk
+  9546 Bad Kleinkirchheim 
+
+  9500 Villach-Maria Gail  ## use Maria Gail ?
+   Maria Gail
+
+- Steiermark
+
+  8505 St. Nikolai i. S.  ## use Flamberg ??
+   Flamberg
+ 
+ 8490 Bad Radkersburg
+  8463 Leutschach
+
+  8224 Kaindorf   ## use Obertiefenbach ?? 
+    Obertiefenbach
+
+  8401 Kalsdorf 
+
+  8142 Wundschuh  ## use Steindorf ??
+   Steindorf
+
+  8481 Weinburg  ## use Pichla/M. ??
+    Pichla/M.
+
+  8280 Fürstenfeld
+  8790 Eisenerz 
+  8273 Ebersdorf 
+  8641 St. Marein 
+
+  8700 Leoben   ## use Göss ??
+   Göss
+
+  8055 Graz
+  8850 Murau
+
+  8970 Schladming
+
+  8181 St. Ruprecht a.d. Raab  ## use Dietmannsdorf ??
+   Dietmannsdorf
+
+  8200 Gleisdorf  ## use Brodersdorf ??
+   Brodersdorf
+
+  8183 Floing   ## use Haring  ??
+   Haring
+
+  8255 St.Jakob i.Walde 
+
+  8280 Fürstenfeld 
+  8114 Großstübing 
+  8820 Neumarkt   ## use Zeutschach ??
+    Zeutschach
+
+  8311 Markt Hartmannsdorf   ## use Reith  ??
+    Reith
+
+  8190 Birkfeld   ## use Aschau ??
+    Aschau
+
+  8786 Rottenmann 
+
+  8411 Hengsberg   ## use Schönberg ??
+   Schönberg
+
+  8200 Gleisdorf 
+  8330 Feldbach  ## use Auersbach ??
+   Auersbach
+
+ 8075 Hart bei Graz 
+
+  8223 Stubenberg  ## use Vockenberg ??
+    Vockenberg
+
+  8522 Unterbergla ## use Nassau
+   Nassau
+
+  8983 Bad Mitterndorf 
+
+  8243 Pinggau   ## use Wiesenhöf ??
+   Wiesenhöf
+
+  8130 Frohnleiten 
+
+  8424 Gabersdorf ## use Sajach ??
+   Sajach
+
+  8970 Schladming 
+  8630 Mariazell 
+
+
+- Oberösterreich
+
+  4113 St. Martin  ## use Adsdorf  ??
+   Adsdorf
+
+  4090 Engelhartszell
+
+  4861 Schörfling (am Attersee) 
+  4890 Frankenmarkt 
+  4881 Straß (i. Attergau)
+  4170 St. Stefan am Walde ## use Unterriedl ??
+   Unterriedl
+
+  4843 Ampflwang   ## use Vorderschlagen ??
+   Vorderschlagen
+
+  4061 Wilhering 
+  4120 Neufelden 
+  4311 Schwertberg 
+
+  4050 Traun 
+
+  4871 Zipf 
+  4020 Linz 
+  4655 Vorchdorf   ## use Eggenberg ??
+   Eggenberg
+
+  4780 Schärding 
+
+  4240 Freistadt 
+  4160 Schlägl 
+  4910 Ried/Innkreis
+  4710 Grieskirchen 
+  4950 Altheim 
+  5142 Eggelsberg   ## use Gundertshausen ??
+   Gundertshausen
+  5261 Uttendorf
+
+  4720 Neumarkt/Hausruck 
+
+  4212 Neumarkt im Mühlkreis  ## use Möhringdorf  ?? 
+   Möhringdorf
+
+  4372 St. Georgen am Walde 
+  4521 Schiedlberg 
+  4864 Attersee  ## use Palmsdorf ??
+    Palmsdorf
+
+  4292 Kefermarkt 
+
+  5121 Ostermiething ## use Ernsting ??
+   Ernsting
+
+  4690 Schwanenstadt ## use Bergern ??
+   Bergern
+
+  4600 Wels 
+
+  5280 Braunau am Inn 
+
+  4873 Frankenburg   ## use Vordersteining ??
+   Vordersteining
+
+  4580 Windischgarsten
+  4860 Lenzing 
+  4550 Kremsmünster  
+  4292 Kefermarkt 
+ 
+  4400 Steyr 
+  4100 Ottensheim 
+  4642 Sattledt 
+
+- Salzburg
+
+ 5020 Salzburg
+  5162 Obertrum
+ 5400 Hallein-Kaltenhausen  # use Kaltenhausen ??
+  Kaltenhausen
+
+  5072 Siezenheim 
+  5082 Grödig 
+  5102 Anthering bei Salzburg  ## use Acharting ??
+   Acharting
+
+  5324 Faistenau 
+  5730 Mittersill 
+
+  5662 Bruck an der Glocknerstraße  ## use Niederhof ??
+   Niederhof
+
+  5661 Rauris
+  5630 Bad Hofgastein   ## use Wieden ??
+   Wieden
+
+  5700 Zell am See  ## use Bruckberg ??
+   Bruckberg
+
+  5151 Nussdorf 
+
+
 
 - Tirol
 
-Unterperfuß/Innsbruck  ## not working
-Unterperfuß  ## try
+  6175 Unterperfuß/Innsbruck   ## use Unterperfuß  ??
+   Unterperfuß
 
-Innsbruck
-Tarrenz
-Alpbach            ## fix typo: Alpach missing b
-Vils
-Lienz
-Zell am Ziller
+  6020 Innsbruck 
 
-St. Johann       ## not working w/ service try Sankt Johann  or Sankt Johann in Tirol
+  6464 Tarrenz  ## use Griesegg ??
+   Griesegg
+
+  6236 Alpbach   ## fix typo: Alpach missing b
+  6682 Vils 
+
+  9900 Lienz 
+  6280 Zell am Ziller
+
+  6380 St. Johann   ## not working w/ service try Sankt Johann  or Sankt Johann in Tirol
 Sankt Johann     ## not working w/ service
 Sankt Johann in Tirol
 
-Pertisau
-Absam
-Rattenberg
-Neustift i. Stubaital
+  6213 Pertisau 
+  6067 Absam 
+  6240 Rattenberg 
+  6167 Neustift i. Stubaital 
+  6622 Rinnen/Berwang 
+    Rinnen  ## try
 
-Rinnen/Berwang  ## not working
-Rinnen  ## try
+  6344 Walchsee/Kaiserwinkl 
+    Walchsee   ## try
+
+  6385 Schwendt 
+  6293 Tux  ## use Lanersbach ??
+    Lanersbach
+
+  6460 Imst
+  6675 Tannheim   ## use Unterhöfen  ??
+    Unterhöfen
+
+  6654 Holzgau 
+  6330 Schwoich bei Kufstein  ## use  Sonnendorf
+    Schwoich   ## try
+    Sonnendorf
 
 
-Walchsee/Kaiserwinkl   ## not working
-Walchsee   ## try
+- Vorarlberg
 
-Schwendt
-Tux
-Imst
-Tannheim
-Holzgau
+  6863 Egg 
+  6850 Dornbirn 
+  6700 Bludenz
+  6820 Frastanz
 
-Schwoich bei Kufstein   ## not working
-Schwoich   ## try
 
