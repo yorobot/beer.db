@@ -1,41 +1,5 @@
-Kobersdorf,200,1,371415,47.5967488,16.3926882,place,village,Kobersdorf| Oberpullendorf| Burgenland| 7332| Österreich
-Steinberg-Dörfl,200,1,643943,47.4744894,16.4869379,place,village,Steinberg| Oberpullendorf| Burgenland| Österreich
-Dörfl,200,1,626024,47.4898495,16.4731321,place,village,Dörfl| Oberpullendorf| Burgenland| Österreich
-Gols,200,1,591428,47.8978762,16.9087968,place,village,Gols| Neusiedl am See| Burgenland| 7122| Österreich
-Neustift a.d. Lafnitz,200,1,645635,47.368317,16.0229645,place,village,Neustift an der Lafnitz| Oberwart| Burgenland| Österreich
-Schwechat,200,1,151149790,48.1397436,16.4780312,boundary,administrative,Gemeinde Schwechat| Wien-Umgebung| Niederösterreich| 2320| Österreich
-Zwettl,200,2,151239237,48.55353765,15.0680780819885,boundary,administrative,Zwettl| Niederösterreich| Österreich
-Unterradlberg,200,1,626254,48.2553232,15.6795466,place,village,Unterradlberg| St.Pölten (Stadt)| Niederösterreich| Österreich
-Wieselburg,200,1,629490,48.1298877,15.1376585,place,town,Wieselburg| Scheibbs| Niederösterreich| Österreich
-Schrems,200,1,632100,48.7934868,15.0722362,place,town,Schrems| Gmünd| Niederösterreich| Österreich
-Laa/Thaya,200,2,235026,48.7218933,16.3916766,place,town,Laa an der Thaya| Mistelbach| Niederösterreich| Österreich
-Egg,200,2,151143591,47.4320489,9.8960043,boundary,administrative,Egg| Bregenz| Vorarlberg| 6863| Österreich
-Frastanz,200,1,151143646,47.2166667,9.6330556,boundary,administrative,Frastanz| Feldkirch| Vorarlberg| 6820| Österreich
-Dornbirn,200,3,151142631,47.4135969,9.7423955,boundary,administrative,Dornbirn| Vorarlberg| 6850| Österreich
-Bludenz,200,2,151143425,47.153037,9.8219314,boundary,administrative,Bludenz| Vorarlberg| 6700| Österreich
-Unterperfuß/Innsbruck,200,1,151253053,47.2596685,11.2575503,boundary,administrative,Unterperfuss| Innsbruck Land| Tirol| 6178| Österreich
-Unterperfuß,200,1,151253053,47.2596685,11.2575503,boundary,administrative,Unterperfuss| Innsbruck Land| Tirol| 6178| Österreich
-Innsbruck,200,1,213786,47.2654296,11.3927685,place,city,Innsbruck| Bezirk Innsbruck-Stadt| Tirol| Österreich
-Tarrenz,200,1,151253526,47.2618485,10.7623191,boundary,administrative,Tarrenz| Imst| Tirol| 6464| Österreich
-Alpbach,200,1,151244869,47.398816,11.9434513,boundary,administrative,Alpbach| Kufstein| Tirol| 6236| Österreich
-Vils,200,1,151131362,47.5482935,10.6307847,boundary,administrative,Vils| Reutte (Außerfern)| Tirol| 6682| Österreich
-Lienz,200,3,151167584,46.8298662,12.7681269,boundary,administrative,Lienz| Tirol| 9900| Österreich
-Zell am Ziller,200,1,151144685,47.2333511,11.8835869,boundary,administrative,Zell am Ziller| Schwaz| Tirol| 6280| Österreich
-St. Johann,200,0,?,?,?,?,?,?
-Sankt Johann,200,0,?,?,?,?,?,?
-Sankt Johann in Tirol,200,1,151144923,47.5224141,12.4286809,boundary,administrative,Sankt Johann in Tirol| Kitzbühel| Tirol| 6380| Österreich
-Pertisau,200,1,16940735,47.4400701,11.6990088,place,village,Pertisau| Schwaz| Tirol| Österreich
-Absam,200,1,151253131,47.2965003,11.5051409,boundary,administrative,Absam| Innsbruck Land| Tirol| 6067| Österreich
-Rattenberg,200,1,151216569,47.4398841,11.8941106,boundary,administrative,Rattenberg| Kufstein| Tirol| 6240| Österreich
-Neustift i. Stubaital,200,2,151144191,47.1106408,11.307579,boundary,administrative,Neustift im Stubaital| Innsbruck Land| Tirol| 6167| Österreich
-Rinnen/Berwang,200,1,646929,47.4047378,10.7175985,place,village,Rinnen| Reutte (Außerfern)| Tirol| Österreich
-Rinnen,200,1,646929,47.4047378,10.7175985,place,village,Rinnen| Reutte (Außerfern)| Tirol| Österreich
-Walchsee/Kaiserwinkl,200,0,?,?,?,?,?,?
-Walchsee,200,1,151145545,47.6518614,12.32007,boundary,administrative,Walchsee| Kufstein| Tirol| 6344| Österreich
-Schwendt,200,2,151145521,47.6314632,12.3919925,boundary,administrative,Schwendt| Kitzbühel| Tirol| 6385| Österreich
-Tux,200,1,151144559,47.128745,11.69180275,boundary,administrative,Tux| Schwaz| Tirol| 6293| Österreich
-Imst,200,3,151143516,47.2381536,10.7406982,boundary,administrative,Imst| Tirol| 6460| Österreich
-Tannheim,200,1,151131663,47.4986071,10.5178106,boundary,administrative,Tannheim| Reutte (Außerfern)| Tirol| 6675| Österreich
-Holzgau,200,2,151131317,47.2599296,10.3444179,boundary,administrative,Holzgau| Reutte (Außerfern)| Tirol| 6654| Österreich
-Schwoich bei Kufstein,200,0,?,?,?,?,?,?
-Schwoich,200,1,151257938,47.5444933,12.13974,boundary,administrative,Schwoich| Kufstein| Tirol| Österreich
+Wien,?,Wien,200,3,110209,48.2083537,16.3725042,place,city,Wien| Österreich
+Wien,?,Ottakring,200,2,151383425,48.2149566,16.3020868769214,boundary,administrative,Ottakring| Wien| 1160| Österreich
+Wien,?,Innere Stadt,200,2,151365975,48.20885945,16.3697671434443,boundary,administrative,Innere Stadt| Wien| 1010| Österreich
+Burgenland,7332,Kobersdorf,200,1,371415,47.5967488,16.3926882,place,village,Kobersdorf| Oberpullendorf| Burgenland| 7332| Österreich
+Burgenland,7453,Steinberg-Dörfl,200,1,643943,47.4744894,16.4869379,place,village,Steinberg| Oberpullendorf| Burgenland| Österreich

@@ -35,13 +35,24 @@ def load_cities( path )
       next   ## skip header
     end
 
+    ## check for postall code
+    ##  must start line
+
+
+    if line =~ /^\s*(\d{4})\s+/
+      postal_code = $1.to_s
+      line = line.sub( postal_code, '' )  # remove from line
+    else
+      postal_code = '?'
+    end
 
     name = line.strip  # remove leading n trailing spaces
-    
+
     puts "name=>#{name}<"
     city = City.new
     city.name = name
     city.region_name = last_region_name
+    city.postal_code = postal_code
     ary << city
   end
 
@@ -86,7 +97,7 @@ def search_city( city )
   data = JSON.parse( json )
   puts "data.class.name: #{data.class.name}, data.size (before): #{data.size}"
 
-  city_res = CityResponse.new
+  city_res = CityResponse.new( city )
   city_res.code = response.code
 
   ## filter; only use class=place:* (excl. place:house) and boundary:administrative
@@ -144,10 +155,12 @@ end
 
 class City
   attr_accessor :name
+  attr_accessor :postal_code
   attr_accessor :region_name  # e.g. bundesland e.g. Wien, Burgendland, etc.
   
   def initialize
-    @name = '?'
+    @name        = '?'
+    @postal_code = '?'   # note: use(s) string
     @region_name = '?'
   end
 end
@@ -155,11 +168,15 @@ end
 
 class CityResponse
 
+  attr_accessor :city
+
   attr_accessor :code # http status code
   attr_accessor :size # no of records returned
   attr_accessor :rec  # first record
 
-  def initialize
+  def initialize( city )
+    @city = city
+
     @code = '?'
     @size = '?'
     @rec  = CityRecord.new
@@ -167,8 +184,13 @@ class CityResponse
 
   def to_ary
     values = []
+    values << city.region_name
+    values << city.postal_code
+    values << city.name
+
     values << code
     values << size
+
     values += rec.to_ary
   end
 
@@ -230,14 +252,18 @@ def load_responses( path )
   File.open( path, 'r').each_line do |line|
 
     values = line.split(',')
-    key = values[0]
 
-    res = CityResponse.new
-    res.code = values[1]
-    res.size = values[2]
-    res.rec = CityRecord.new.from_ary( values[3..-1] )
+    city = City.new
+    city.region_name = values[0]
+    city.postal_code = values[1]
+    city.name        = values[2]
 
-    hash[ key ] = res
+    res = CityResponse.new( city )
+    res.code = values[3]
+    res.size = values[4]
+    res.rec = CityRecord.new.from_ary( values[5..-1] )
+
+    hash[ city.name ] = res
   end
   
   hash
@@ -246,10 +272,8 @@ end
 def save_responses( path, hash )
   File.open( path, 'w') do |file|
 
-    hash.each do |k,v|
-      values = []
-      values << k
-      values += v.to_ary
+    hash.each do |_,v|
+      values = v.to_ary
       file.puts values.join( ',' )
     end
 
@@ -268,7 +292,7 @@ cache = load_responses( CITIES_OUT_PATH )
 
 
 cities.each_with_index do |city,i|
-  ## next if i > 4
+  next if i > 4
 
   puts "#{i} #{city.name} / #{city.region_name}"
 
