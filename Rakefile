@@ -108,6 +108,9 @@ end
 task :importworld => :configworld do
   # populate world tables
   WorldDb.read_setup( 'setups/sport.db.admin', WORLD_DB_INCLUDE_PATH, skip_tags: true )
+
+  ## WorldDb.read_setup( 'setups/all', AUSTRIA_DB_INCLUDE_PATH )
+  WorldDb.read_setup( 'setups/old', AUSTRIA_DB_INCLUDE_PATH )  ## fix: update use states.txt etc.
 end
 
 

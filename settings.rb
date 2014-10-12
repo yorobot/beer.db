@@ -3,8 +3,9 @@
 
 # -- world.db --
 
-OPENMUNDI_ROOT        = "../../openmundi"
-WORLD_DB_INCLUDE_PATH = "#{OPENMUNDI_ROOT}/world.db"
+OPENMUNDI_ROOT           = "../../openmundi"
+WORLD_DB_INCLUDE_PATH    = "#{OPENMUNDI_ROOT}/world.db"
+AUSTRIA_DB_INCLUDE_PATH  = "#{OPENMUNDI_ROOT}/austria.db"
 
 
 # -- beer.db --
@@ -35,7 +36,8 @@ JP_INCLUDE_PATH               = "#{OPENBEER_ROOT}/jp-japan"
 settings = <<EOS
 *****************
 settings:
-  WORLD_DB_INCLUDE_PATH: #{WORLD_DB_INCLUDE_PATH}
+  WORLD_DB_INCLUDE_PATH:   #{WORLD_DB_INCLUDE_PATH}
+  AUSTRIA_DB_INCLUDE_PATH: #{AUSTRIA_DB_INCLUDE_PATH}
 
   WORLD_INCLUDE_PATH:        #{WORLD_INCLUDE_PATH}
   DE_INCLUDE_PATH:           #{DE_INCLUDE_PATH}
