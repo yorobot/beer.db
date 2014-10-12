@@ -54,7 +54,7 @@ def search_city( city )
   base_url = 'http://open.mapquestapi.com/nominatim/v1/search.php'
   params = {
     format: 'json',
-    city: city.name,
+    q: "#{city.name}, #{city.region_name}",
     countrycodes: 'at'
   }
 
@@ -84,10 +84,33 @@ def search_city( city )
   pp json[0..20]
 
   data = JSON.parse( json )
-  puts "data.class.name: #{data.class.name}, data.size: #{data.size}"
+  puts "data.class.name: #{data.class.name}, data.size (before): #{data.size}"
 
   city_res = CityResponse.new
   city_res.code = response.code
+
+  ## filter; only use class=place:* (excl. place:house) and boundary:administrative
+  data2 = []
+  data.each_with_index do |entry,i|
+    ## skip place:house; otherwise include all places and boundary:administrative
+    if (entry['class'] == 'place' && entry['type'] != 'house') ||
+       (entry['class'] == 'boundary' && entry['type'] == 'administrative')
+
+      ## check: must match bundesland/state too e.g. Burgendland etc.
+      if entry['display_name'] =~ /#{city.region_name}/ &&
+        data2 << entry
+        puts "   add #{i}  #{entry['class']}:#{entry['type']} - #{entry['display_name']}"
+      else
+        puts "   skip #{i} #{entry['class']}:#{entry['type']} - #{entry['display_name']}" 
+      end
+    else
+      puts "   skip #{i} #{entry['class']}:#{entry['type']} - #{entry['display_name']}" 
+    end
+  end
+  data = data2
+
+  puts "data.size (after): #{data.size}"
+
   city_res.size = data.size
 
   if data.size > 0
@@ -99,16 +122,16 @@ def search_city( city )
     else
       ## try match for region_name in display_name e.g. Burgenland
       ##  for now assumes/works only for one city/place name per region (bundesland/province)
-      data.each do |entry|
+      data.each_with_index do |entry,i|
         if entry['display_name'] =~ /#{city.region_name}/
           ## pp entry   ## print first entry
           city_rec = CityRecord.new
           city_rec.from_hash( entry )
           city_res.rec = city_rec
-          puts " **** bingo"
+          puts " **** bingo: #{i} -> #{entry['display_name']}"
           break ## bingo
         else
-          puts " no match: #{entry['display_name']}"
+          puts " no match: #{i} -> #{entry['display_name']}"
         end
       end
     end
@@ -201,6 +224,9 @@ end # class CityRecord
 def load_responses( path )
   hash = {}
 
+  return hash  unless File.exists?( path )   ## no file; no need to read in
+
+
   File.open( path, 'r').each_line do |line|
 
     values = line.split(',')
@@ -231,14 +257,18 @@ def save_responses( path, hash )
 end
 
 
-cities = load_cities( './geo/at-cities-input.txt' )
+CITIES_IN_PATH  = './geo/at-cities-input.txt'
+CITIES_OUT_PATH = './geo/at-cities.csv'
+
+cities = load_cities( CITIES_IN_PATH )
 pp cities
 
 
-cache = load_responses( './geo/at-cities.csv' )
+cache = load_responses( CITIES_OUT_PATH )
+
 
 cities.each_with_index do |city,i|
-  ## next if i > 2
+  ## next if i > 4
 
   puts "#{i} #{city.name} / #{city.region_name}"
 
@@ -272,7 +302,7 @@ end
 
 cache = cache2  # delete old "unordered" cache
 
-save_responses( './geo/at-cities.csv', cache )
+save_responses( CITIES_OUT_PATH, cache )
 
 
 puts 'bye'

@@ -2,8 +2,8 @@
 
 Kobersdorf
 
-Steinberg-Dörfl  ## not working - Dörfl too
-Steinberg        ## try
+Steinberg-Dörfl  ## not working
+Dörfl            ## try
 
 Gols
 Neustift a.d. Lafnitz
@@ -32,11 +32,15 @@ Unterperfuß  ## try
 
 Innsbruck
 Tarrenz
-Alpach
+Alpbach            ## fix typo: Alpach missing b
 Vils
 Lienz
 Zell am Ziller
-St. Johann
+
+St. Johann       ## not working w/ service try Sankt Johann  or Sankt Johann in Tirol
+Sankt Johann     ## not working w/ service
+Sankt Johann in Tirol
+
 Pertisau
 Absam
 Rattenberg
