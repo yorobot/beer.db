@@ -10,67 +10,21 @@
 #   $ rake -T        - show all tasks
 
 
+
 BUILD_DIR = "./build"
 
-# -- output db config
-BEER_DB_PATH = "#{BUILD_DIR}/beer.db"
+# stdlibs
+require 'yaml'
+require 'erb'
+require 'pp'
 
 
-# -- input repo sources config
-OPENMUNDI_ROOT = "../../openmundi"
-OPENBEER_ROOT = ".."
+## our code
+require './settings'
 
-WORLD_DB_INCLUDE_PATH = "#{OPENMUNDI_ROOT}/world.db"
-
-
-WORLD_INCLUDE_PATH            = "#{OPENBEER_ROOT}/world"
-
-DE_INCLUDE_PATH               = "#{OPENBEER_ROOT}/de-deutschland"
-AT_INCLUDE_PATH               = "#{OPENBEER_ROOT}/at-austria"
-CH_INCLUDE_PATH               = "#{OPENBEER_ROOT}/ch-confoederatio-helvetica"
-CZ_INCLUDE_PATH               = "#{OPENBEER_ROOT}/cz-czech-republic"
-IE_INCLUDE_PATH               = "#{OPENBEER_ROOT}/ie-ireland"
-BE_INCLUDE_PATH               = "#{OPENBEER_ROOT}/be-belgium"
-NL_INCLUDE_PATH               = "#{OPENBEER_ROOT}/nl-netherlands"
-
-CA_INCLUDE_PATH               = "#{OPENBEER_ROOT}/ca-canada"
-US_INCLUDE_PATH               = "#{OPENBEER_ROOT}/us-united-states"
-MX_INCLUDE_PATH               = "#{OPENBEER_ROOT}/mx-mexico"
-
-JP_INCLUDE_PATH               = "#{OPENBEER_ROOT}/jp-japan"
-
-
-
-DB_CONFIG = {
-  adapter:    'sqlite3',
-  database:   BEER_DB_PATH
-}
-
-
-#######################
-#  print settings
-
-settings = <<EOS
-*****************
-settings:
-  WORLD_DB_INCLUDE_PATH: #{WORLD_DB_INCLUDE_PATH}
-
-  WORLD_INCLUDE_PATH:        #{WORLD_INCLUDE_PATH}
-  DE_INCLUDE_PATH:           #{DE_INCLUDE_PATH}
-  AT_INCLUDE_PATH:           #{AT_INCLUDE_PATH}
-  CH_INCLUDE_PATH:           #{CH_INCLUDE_PATH}
-  CZ_INCLUDE_PATH:           #{CZ_INCLUDE_PATH}
-  IE_INCLUDE_PATH:           #{IE_INCLUDE_PATH}
-  BE_INCLUDE_PATH:           #{BE_INCLUDE_PATH}
-  NL_INCLUDE_PATH:           #{NL_INCLUDE_PATH}
-  CA_INCLUDE_PATH:           #{CA_INCLUDE_PATH}
-  US_INCLUDE_PATH:           #{US_INCLUDE_PATH}
-  MX_INCLUDE_PATH:           #{MX_INCLUDE_PATH}
-  JP_INCLUDE_PATH:           #{JP_INCLUDE_PATH}
-*****************
-EOS
-
-puts settings
+## load database config from external file (easier to configure/change)
+DB_HASH = YAML.load( ERB.new( File.read( './database.yml' )).result )
+DB_CONFIG = DB_HASH[ 'default' ] ## for now just always use default section/entr
 
 
 
@@ -81,7 +35,16 @@ directory BUILD_DIR
 
 
 task :clean do
-  rm BEER_DB_PATH if File.exists?( BEER_DB_PATH )
+  ## note: was sqlite3 only (specific) => rm BEER_DB_PATH if File.exists?( BEER_DB_PATH )
+
+  db_adapter = DB_CONFIG[ 'adapter' ]
+  ### for sqlite3 delete/remove single-file database
+  if db_adapter == 'sqlite3'
+    db_database = DB_CONFIG[ 'database' ]
+    rm db_database if File.exists?( db_database )
+  else
+    puts " clean: do nothing; no clean steps configured for db adapter >#{db_adapter}<"
+  end
 end
 
 
