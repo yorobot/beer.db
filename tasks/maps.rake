@@ -6,5 +6,7 @@ task :maps => :env do
 
   build_map()
 
+  check_breweries_for_missing_city()
+
   puts 'Done.'
 end
