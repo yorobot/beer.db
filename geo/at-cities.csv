@@ -3,3 +3,220 @@ Wien,?,Ottakring,200,2,151383425,48.2149566,16.3020868769214,boundary,administra
 Wien,?,Innere Stadt,200,2,151365975,48.20885945,16.3697671434443,boundary,administrative,Innere Stadt| Wien| 1010| Österreich
 Burgenland,7332,Kobersdorf,200,1,371415,47.5967488,16.3926882,place,village,Kobersdorf| Oberpullendorf| Burgenland| 7332| Österreich
 Burgenland,7453,Steinberg-Dörfl,200,1,643943,47.4744894,16.4869379,place,village,Steinberg| Oberpullendorf| Burgenland| Österreich
+Burgenland,?,Dörfl,200,1,626024,47.4898495,16.4731321,place,village,Dörfl| Oberpullendorf| Burgenland| Österreich
+Burgenland,7122,Gols,200,1,591428,47.8978762,16.9087968,place,village,Gols| Neusiedl am See| Burgenland| 7122| Österreich
+Burgenland,7423,Neustift a.d. Lafnitz,200,1,645635,47.368317,16.0229645,place,village,Neustift an der Lafnitz| Oberwart| Burgenland| Österreich
+Niederösterreich,3483,Feuersbrunn,200,1,298030,48.4394321,15.7851691,place,village,Feuersbrunn| Tulln| Niederösterreich| Österreich
+Niederösterreich,3483,Wagram/Wagram,200,9,7070738,48.2959872,16.5568452,place,town,Deutsch-Wagram| Gänserndorf| Niederösterreich| Österreich
+Niederösterreich,?,Grafenwörth,200,1,151146912,48.4085802,15.7779946,boundary,administrative,Grafenwörth| Tulln| Niederösterreich| 3484| Österreich
+Niederösterreich,?,Grafenegg,200,1,151219017,48.4321223,15.7472046,boundary,administrative,Grafenegg| Krems (Land)| Niederösterreich| Österreich
+Niederösterreich,2534,Alland,200,1,151148973,48.0588086,16.075773,boundary,administrative,Alland| Baden| Niederösterreich| 2534| Österreich
+Niederösterreich,3392,Gerolding,200,1,649323,48.2509053,15.421579,place,village,Gerolding| Melk| Niederösterreich| Österreich
+Niederösterreich,3072,Kasten,200,0,?,?,?,?,?,?
+Niederösterreich,?,Steinabruck,200,1,638786,48.1481697,15.7930078,place,hamlet,Steinabruck| Sankt Pölten (Land)| Niederösterreich| Österreich
+Niederösterreich,2822,Bad Erlach,200,1,151149291,47.7266088,16.2146518,boundary,administrative,Bad Erlach| Wiener Neustadt (Land)| Niederösterreich| 2822| Österreich
+Niederösterreich,3970,Weitra,200,1,151255733,48.7010605,14.8926097,boundary,administrative,Weitra| Gmünd| Niederösterreich| 3970| Österreich
+Niederösterreich,2100,Korneuburg,200,2,151147102,48.44041125,16.2137866452156,boundary,administrative,Korneuburg| Niederösterreich| Österreich
+Niederösterreich,3170,Hainfeld,200,1,151255537,48.0348811,15.7712084,boundary,administrative,Hainfeld| Lilienfeld| Niederösterreich| 3170| Österreich
+Niederösterreich,3292,Gaming,200,1,151256304,47.9286915,15.0876554,boundary,administrative,Gaming| Scheibbs| Niederösterreich| 3292| Österreich
+Niederösterreich,2345,Brunn am Gebirge,200,1,234274,48.1070931,16.2836918,place,village,Brunn am Gebirge| Mödling| Niederösterreich| 2345| Österreich
+Niederösterreich,2722,Winzendorf,200,1,625944,47.8094981,16.1134821,place,village,Winzendorf| Wiener Neustadt (Land)| Niederösterreich| Österreich
+Niederösterreich,2831,Warth,200,2,562128,48.0423919,15.4522464,place,village,Warth| Sankt Pölten (Land)| Niederösterreich| Österreich
+Niederösterreich,2284,Untersiebenbrunn,200,2,78271284,48.25528325,16.7447625094486,place,village,Untersiebenbrunn| Gänserndorf| Niederösterreich| Österreich
+Niederösterreich,2851,Krumbach,200,1,151149272,47.5103717,16.1969282168986,boundary,administrative,Krumbach| Wiener Neustadt (Land)| Niederösterreich| Österreich
+Niederösterreich,2832,Thernberg,200,1,160384,47.6615042,16.1771203,place,village,Thernberg| Bezirk Neunkirchen| Niederösterreich| Österreich
+Niederösterreich,3003,Gablitz,200,1,1666128,48.2278911,16.1537402,place,village,Gablitz| Wien-Umgebung| Niederösterreich| Österreich
+Niederösterreich,2320,Schwechat,200,1,151149790,48.1397436,16.4780312,boundary,administrative,Gemeinde Schwechat| Wien-Umgebung| Niederösterreich| 2320| Österreich
+Niederösterreich,3910,Zwettl,200,2,151239237,48.55353765,15.0680780819885,boundary,administrative,Zwettl| Niederösterreich| Österreich
+Niederösterreich,3105,Unterradlberg,200,1,626254,48.2553232,15.6795466,place,village,Unterradlberg| St.Pölten (Stadt)| Niederösterreich| Österreich
+Niederösterreich,3250,Wieselburg,200,1,629490,48.1298877,15.1376585,place,town,Wieselburg| Scheibbs| Niederösterreich| Österreich
+Niederösterreich,3943,Schrems,200,1,632100,48.7934868,15.0722362,place,town,Schrems| Gmünd| Niederösterreich| Österreich
+Niederösterreich,2136,Laa/Thaya,200,2,235026,48.7218933,16.3916766,place,town,Laa an der Thaya| Mistelbach| Niederösterreich| Österreich
+Niederösterreich,2486,Siegersdorf,200,2,625428,47.9025176,16.3532042,place,village,Siegersdorf| Baden| Niederösterreich| Österreich
+Niederösterreich,3763,Japons,200,1,551117,48.7926425,15.5678266,place,village,Japons| Horn| Niederösterreich| Österreich
+Niederösterreich,?,Zettenreith,200,1,554275,48.8155518,15.5664478,place,village,Zettenreith| Horn| Niederösterreich| Österreich
+Niederösterreich,2641,Schottwien,200,1,637592,47.6545995,15.8716054,place,village,Schottwien| Bezirk Neunkirchen| Niederösterreich| Österreich
+Niederösterreich,3121,Karlstetten,200,1,651953,48.2586538,15.5656447,place,village,Karlstetten| Sankt Pölten (Land)| Niederösterreich| Österreich
+Niederösterreich,?,Schaubing,200,1,555652,48.2590145,15.6185407,place,hamlet,Schaubing| Sankt Pölten (Land)| Niederösterreich| Österreich
+Niederösterreich,3550,Langenlois,200,1,4204283,48.472601,15.676295,place,town,Langenlois| Krems (Land)| Niederösterreich| Österreich
+Niederösterreich,2640,Gloggnitz,200,1,642857,47.6757858,15.9374085,place,town,Gloggnitz| Bezirk Neunkirchen| Niederösterreich| Österreich
+Niederösterreich,?,Raach am Hochgebirge,200,1,638053,47.6433515,15.9304953,place,village,Raach am Hochgebirge| Bezirk Neunkirchen| Niederösterreich| Österreich
+Niederösterreich,2831,Haßbach,200,1,646404,47.6530813,16.0570434,place,village,Haßbach| Bezirk Neunkirchen| Niederösterreich| Österreich
+Niederösterreich,3442,Langenrohr,200,1,271019,48.306687,16.0071885,place,village,Langenrohr| Tulln| Niederösterreich| Österreich
+Niederösterreich,3160,Traisen,200,1,151150805,48.0435449,15.6098667,boundary,administrative,Traisen| Lilienfeld| Niederösterreich| 3160| Österreich
+Niederösterreich,3161,St. Veit an der Gölsen,200,1,151255540,48.0438943,15.6703728,boundary,administrative,St. Veit an der Gölsen| Lilienfeld| Niederösterreich| 3161| Österreich
+Niederösterreich,2563,Pottenstein,200,1,160403,47.9643174,16.0908164,place,village,Pottenstein| Baden| Niederösterreich| Österreich
+Niederösterreich,?,Kartause,200,0,?,?,?,?,?,?
+Niederösterreich,3633,Schönbach,200,1,644546,48.4533746,15.0390921,place,village,Schönbach| Zwettl| Niederösterreich| Österreich
+Niederösterreich,2650,Payerbach,200,1,644282,47.6931375,15.8623556,place,village,Payerbach| Bezirk Neunkirchen| Niederösterreich| Österreich
+Niederösterreich,3662,Münichreith am Ostrong,200,1,650722,48.264524,15.1309828,place,village,Münichreith| Melk| Niederösterreich| Österreich
+Niederösterreich,3340,Waidhofen/Ybbs,200,3,151381337,47.95126495,14.7445258559413,boundary,administrative,Waidhofen an der Ybbs (Stadt)| Niederösterreich| Österreich
+Niederösterreich,2640,Enzenreith,200,1,635227,47.6693834,15.952258,place,village,Enzenreith| Bezirk Neunkirchen| Niederösterreich| Österreich
+Kärnten,9640,Kötschach-Mauthen,200,0,?,?,?,?,?,?
+Kärnten,?,Mauthen,200,1,629101,46.6632946,13.0001147,place,village,Mauthen| Hermagor| Region Oberkärnten| Kärnten| Österreich
+Kärnten,9311,Kraig,200,1,10840046,46.81153,14.3675071,place,village,Kraig| Sankt Veit an der Glan| Region Unterkärnten| Kärnten| Österreich
+Kärnten,?,Wimitz,200,1,651109,46.8359995,14.3611876,place,locality,Wimitz| Frauenstein| Sankt Veit an der Glan| Region Unterkärnten| Kärnten| Österreich
+Kärnten,9322,Micheldorf,200,3,151146854,46.914433,14.4266404,boundary,administrative,Micheldorf| Sankt Veit an der Glan| Region Unterkärnten| Kärnten| Österreich
+Kärnten,?,Hirt,200,1,564085,46.9032079,14.4360294,place,village,Hirt| Sankt Veit an der Glan| Region Unterkärnten| Kärnten| Österreich
+Kärnten,9500,Villach,200,1,161160,46.6167284,13.8500268,place,town,Villach| Villach (Stadt)| Region Klagenfurt-Villach| Kärnten| Österreich
+Kärnten,9020,Klagenfurt,200,2,161570,46.6228162,14.3079604,place,city,Klagenfurt| Klagenfurt (Stadt)| Region Klagenfurt-Villach| Kärnten| Österreich
+Kärnten,9150,Bleiburg,200,1,20070004,46.5901545,14.7989782,place,town,Bleiburg/Pliberk| Völkermarkt| Region Unterkärnten| Kärnten| Österreich
+Kärnten,9556,Liebenfels,200,1,151147334,46.7381602,14.2884254,boundary,administrative,Liebenfels| Sankt Veit an der Glan| Region Unterkärnten| Kärnten| 9556| Österreich
+Kärnten,?,Zweikirchen,200,1,10809063,46.7122278,14.2645531,place,village,Zweikirchen| Sankt Veit an der Glan| Region Unterkärnten| Kärnten| Österreich
+Kärnten,9132,Gallizien,200,1,648768,46.5592277,14.5066104,place,village,Gallizien| Völkermarkt| Region Unterkärnten| Kärnten| Österreich
+Kärnten,?,Pirk,200,5,641048,46.8349305,13.5047762,place,village,Pirk| Spittal an der Drau| Region Oberkärnten| Kärnten| Österreich
+Kärnten,9546,Bad Kleinkirchheim,200,1,628679,46.8146117,13.7984008,place,village,Bad Kleinkirchheim| Spittal an der Drau| Region Oberkärnten| Kärnten| Österreich
+Kärnten,9500,Villach-Maria Gail,200,0,?,?,?,?,?,?
+Kärnten,?,Maria Gail,200,1,647987,46.599612,13.8797358,place,village,Maria Gail| Villach (Stadt)| Region Klagenfurt-Villach| Kärnten| Österreich
+Steiermark,8505,St. Nikolai i. S.,200,0,?,?,?,?,?,?
+Steiermark,?,Flamberg,200,1,649333,46.8272689,15.4764315,place,village,Flamberg| Leibnitz| Steiermark| Österreich
+Steiermark,8490,Bad Radkersburg,200,1,627874,46.6880556,15.9880546,place,town,Bad Radkersburg| Südoststeiermark| Steiermark| Österreich
+Steiermark,8463,Leutschach,200,1,6642767,46.66735,15.4681947,place,village,Leutschach| Leibnitz| Steiermark| 8463| Österreich
+Steiermark,8224,Kaindorf,200,2,1569817,47.1060817,14.1261072,place,village,Kaindorf| Murau| Steiermark| Österreich
+Steiermark,?,Obertiefenbach,200,1,635577,47.2240057,15.8549716,place,village,Obertiefenbach| Hartberg-Fürstenfeld| Steiermark| Österreich
+Steiermark,8401,Kalsdorf,200,0,?,?,?,?,?,?
+Steiermark,8142,Wundschuh,200,1,636011,46.9253885,15.4492116,place,village,Wundschuh| Graz-Umgebung| Steiermark| Österreich
+Steiermark,?,Steindorf,200,2,635838,46.9059047,15.4391951,place,village,Steindorf| Graz-Umgebung| Steiermark| Österreich
+Steiermark,8481,Weinburg,200,2,641499,47.2262312,16.0286287,place,village,Weinberg| Hartberg-Fürstenfeld| Steiermark| Österreich
+Steiermark,?,Pichla/M.,200,0,?,?,?,?,?,?
+Steiermark,8280,Fürstenfeld,200,1,215288,47.0499925,16.0816815,place,town,Fürstenfeld| Hartberg-Fürstenfeld| Steiermark| Österreich
+Steiermark,8790,Eisenerz,200,1,651630,47.5420788,14.8857099,place,town,Eisenerz| Leoben| Steiermark| 8790| Österreich
+Steiermark,8273,Ebersdorf,200,4,644190,46.8480528,15.8508884,place,village,Ebersdorf| Südoststeiermark| Steiermark| Österreich
+Steiermark,8641,St. Marein,200,0,?,?,?,?,?,?
+Steiermark,8700,Leoben,200,3,151139837,47.4302736,14.8780003804749,boundary,administrative,Leoben| Steiermark| Österreich
+Steiermark,?,Göss,200,1,646265,47.3610441,15.0967616,place,village,Göß| Leoben| Steiermark| Österreich
+Steiermark,8055,Graz,200,2,151147666,47.0708101,15.4382918,place,city,Graz| Steiermark| Österreich
+Steiermark,8850,Murau,200,2,2586685931,47.11224,14.16919,boundary,administrative,Murau| Steiermark| 8850| Österreich
+Steiermark,8970,Schladming,200,1,195084027,47.3940415,13.6867878,boundary,administrative,Schladming| Expositur Gröbming| Liezen| Steiermark| 8970| Österreich
+Steiermark,8181,St. Ruprecht a.d. Raab,200,1,634468,47.1531781,15.6633027,place,village,Sankt Ruprecht an der Raab| Weiz| Steiermark| Österreich
+Steiermark,?,Dietmannsdorf,200,1,628978,47.1471405,15.6769639,place,village,Dietmannsdorf| Weiz| Steiermark| Österreich
+Steiermark,8200,Gleisdorf,200,1,215550,47.1067722,15.7058606,place,town,Gleisdorf| Weiz| Steiermark| Österreich
+Steiermark,?,Brodersdorf,200,1,201668,47.112426,15.6480391,place,village,Brodersdorf| Graz-Umgebung| Steiermark| Österreich
+Steiermark,8183,Floing,200,1,634820,47.2641263,15.7462248,place,village,Floing| Weiz| Steiermark| Österreich
+Steiermark,?,Haring,200,0,?,?,?,?,?,?
+Steiermark,8255,St.Jakob i.Walde,200,1,146396,47.4660432,15.786947,place,village,St. Jakob i.W.| Hartberg-Fürstenfeld| Steiermark| Österreich
+Steiermark,8114,Großstübing,200,1,643036,47.1921382,15.2348212,place,village,Großstübing| Graz-Umgebung| Steiermark| Österreich
+Steiermark,8820,Neumarkt,200,0,?,?,?,?,?,?
+Steiermark,?,Zeutschach,200,1,634441,47.0709331,14.366969,place,village,Zeutschach| Murau| Steiermark| Österreich
+Steiermark,8311,Markt Hartmannsdorf,200,1,640278,47.0546863,15.8431863,place,village,Markt Hartmannsdorf| Weiz| Steiermark| Österreich
+Steiermark,?,Reith,200,3,633194,46.9611223,15.806915,place,village,Reith| Südoststeiermark| Steiermark| Österreich
+Steiermark,8190,Birkfeld,200,1,223475,47.3560545,15.6949704,place,village,Birkfeld| Weiz| Steiermark| Österreich
+Steiermark,?,Aschau,200,2,633920,47.3469162,15.6691243,place,village,Aschau| Weiz| Steiermark| Österreich
+Steiermark,8786,Rottenmann,200,2,636014,47.524226,14.3585643,place,town,Rottenmann| Liezen| Steiermark| Österreich
+Steiermark,8411,Hengsberg,200,1,151139904,46.8691412,15.4500606,boundary,administrative,Hengsberg| Leibnitz| Steiermark| 8411| Österreich
+Steiermark,?,Schönberg,200,1,8728637,47.2278609,14.7618692,place,hamlet,Schönberg| Murtal| Steiermark| 8720| Österreich
+Steiermark,8330,Feldbach,200,1,215521,46.952187,15.8883088,place,town,Feldbach| Südoststeiermark| Steiermark| Österreich
+Steiermark,?,Auersbach,200,0,?,?,?,?,?,?
+Steiermark,8075,Hart bei Graz,200,1,151131463,47.058546,15.5190447795053,boundary,administrative,Hart bei Graz| Graz-Umgebung| Steiermark| 8075| Österreich
+Steiermark,8223,Stubenberg,200,0,?,?,?,?,?,?
+Steiermark,?,Vockenberg,200,2,713270,47.0878156,14.3817655,place,hamlet,Vockenberg| Murau| Steiermark| Österreich
+Steiermark,8522,Unterbergla,200,1,639973,46.8069767,15.314356,place,village,Unterbergla| Deutschlandsberg| Steiermark| Österreich
+Steiermark,?,Nassau,200,1,642176,46.8100585,15.3413493,place,village,Nassau| Deutschlandsberg| Steiermark| Österreich
+Steiermark,8983,Bad Mitterndorf,200,1,636612,47.5553729,13.9323276,place,village,Bad Mitterndorf| Liezen| Steiermark| Österreich
+Steiermark,8243,Pinggau,200,1,632206,47.4449203,16.065131,place,village,Pinggau| Hartberg-Fürstenfeld| Steiermark| Österreich
+Steiermark,?,Wiesenhöf,200,2,646444,47.4060361,15.8716739,place,village,Wiesenhöf| Hartberg-Fürstenfeld| Steiermark| Österreich
+Steiermark,8130,Frohnleiten,200,1,215311,47.2715315,15.3260206,place,town,Frohnleiten| Graz-Umgebung| Steiermark| Österreich
+Steiermark,8424,Gabersdorf,200,1,632204,46.7815803,15.588592,place,village,Gabersdorf| Leibnitz| Steiermark| Österreich
+Steiermark,?,Sajach,200,2,630180,46.9552562,15.3253156,place,village,Sajach| Deutschlandsberg| Steiermark| Österreich
+Steiermark,8630,Mariazell,200,1,2591737424,47.7717395,15.3174781,boundary,administrative,Mariazell| Bezirk Bruck-Mürzzuschlag| Steiermark| 8630| Österreich
+Oberösterreich,4113,St. Martin,200,1,638184,48.2386683,14.2612364,place,village,Sankt Martin| Linz-Land| Oberösterreich| 4050| Österreich
+Oberösterreich,?,Adsdorf,200,1,628554,48.4246362,14.035995,place,hamlet,Adsdorf| Rohrbach| Oberösterreich| Österreich
+Oberösterreich,4090,Engelhartszell,200,1,202907,48.5040454,13.7331661,place,village,Engelhartszell| Schärding| Oberösterreich| Österreich
+Oberösterreich,4861,Schörfling (am Attersee),200,1,151146552,47.9461563,13.6040034,boundary,administrative,Schörfling am Attersee| Vöcklabruck| Oberösterreich| 4861| Österreich
+Oberösterreich,4890,Frankenmarkt,200,1,151147887,47.993067,13.4199273435388,boundary,administrative,Frankenmarkt| Vöcklabruck| Oberösterreich| 4890| Österreich
+Oberösterreich,4881,Straß (i. Attergau),200,1,151146989,47.9092541,13.4540582,boundary,administrative,Straß im Attergau| Vöcklabruck| Oberösterreich| 4881| Österreich
+Oberösterreich,4170,St. Stefan am Walde,200,1,151257165,48.5674914,14.1025205,boundary,administrative,Sankt Stefan am Walde| Rohrbach| Oberösterreich| 4170| Österreich
+Oberösterreich,?,Unterriedl,200,1,634649,48.5618498,14.0822759,place,hamlet,Unterriedl| Rohrbach| Oberösterreich| Österreich
+Oberösterreich,4843,Ampflwang,200,1,151148425,48.0924656,13.5661129,boundary,administrative,Ampflwang im Hausruckwald| Vöcklabruck| Oberösterreich| 4843| Österreich
+Oberösterreich,?,Vorderschlagen,200,1,648433,48.1044098,13.5425435,place,hamlet,Vorderschlagen| Vöcklabruck| Oberösterreich| Österreich
+Oberösterreich,4061,Wilhering,200,1,151145551,48.3235801,14.1921444,boundary,administrative,Wilhering| Linz-Land| Oberösterreich| 4073| Österreich
+Oberösterreich,4120,Neufelden,200,1,151254776,48.4842345,13.9997079,boundary,administrative,Neufelden| Rohrbach| Oberösterreich| 4120| Österreich
+Oberösterreich,4311,Schwertberg,200,1,151238812,48.27415,14.5823796,boundary,administrative,Schwertberg| Perg| Oberösterreich| 4311| Österreich
+Oberösterreich,4050,Traun,200,1,151145657,48.2211206,14.2374246,boundary,administrative,Traun| Linz-Land| Oberösterreich| 4050| Österreich
+Oberösterreich,4871,Zipf,200,1,635992,48.0363053,13.5031657,place,village,Zipf| Vöcklabruck| Oberösterreich| 4871| Österreich
+Oberösterreich,4020,Linz,200,2,120446,48.3058789,14.2865628,place,city,Linz| Linz (Stadt)| Oberösterreich| Österreich
+Oberösterreich,4655,Vorchdorf,200,1,151141588,48.0035141,13.922837,boundary,administrative,Vorchdorf| Gmunden| Oberösterreich| 4655| Österreich
+Oberösterreich,?,Eggenberg,200,4,631669,47.9506992,13.4982946,place,village,Eggenberg| Vöcklabruck| Oberösterreich| Österreich
+Oberösterreich,4780,Schärding,200,2,151216096,48.4569975,13.4318,boundary,administrative,Schärding| Oberösterreich| 4780| Österreich
+Oberösterreich,4240,Freistadt,200,2,151148680,48.5112961,14.5047566,boundary,administrative,Freistadt| Oberösterreich| 4240| Österreich
+Oberösterreich,4160,Schlägl,200,1,151255149,48.636892,13.9668473,boundary,administrative,Schlägl| Rohrbach| Oberösterreich| 4160| Österreich
+Oberösterreich,4910,Ried/Innkreis,200,1,151218242,48.2085868,13.48839,boundary,administrative,Ried im Innkreis| Oberösterreich| 4910| Österreich
+Oberösterreich,4710,Grieskirchen,200,2,151245071,48.235011,13.826192,boundary,administrative,Grieskirchen| Oberösterreich| 4710| Österreich
+Oberösterreich,4950,Altheim,200,2,151216225,48.250022,13.2320404,boundary,administrative,Altheim| Braunau am Inn| Oberösterreich| 4950| Österreich
+Oberösterreich,5142,Eggelsberg,200,1,151217980,48.0765942,12.9910444,boundary,administrative,Eggelsberg| Braunau am Inn| Oberösterreich| 5142| Österreich
+Oberösterreich,?,Gundertshausen,200,1,630408,48.0897227,12.9901673,place,hamlet,Gundertshausen| Braunau am Inn| Oberösterreich| Österreich
+Oberösterreich,5261,Uttendorf,200,4,635607,48.4594449,14.1228453,place,village,Uttendorf| Rohrbach| Oberösterreich| Österreich
+Oberösterreich,4720,Neumarkt/Hausruck,200,0,?,?,?,?,?,?
+Oberösterreich,4212,Neumarkt im Mühlkreis,200,1,151147335,48.4282728,14.4845341,boundary,administrative,Neumarkt im Mühlkreis| Freistadt| Oberösterreich| 4212| Österreich
+Oberösterreich,?,Möhringdorf,200,1,631815,48.4070385,14.4673467,place,hamlet,Möhringdorf| Freistadt| Oberösterreich| Österreich
+Oberösterreich,4372,St. Georgen am Walde,200,1,151238989,48.35948,14.8967303,boundary,administrative,Sankt Georgen am Walde| Perg| Oberösterreich| 4372| Österreich
+Oberösterreich,4521,Schiedlberg,200,1,151146128,48.0920742,14.2645752,boundary,administrative,Schiedlberg| Steyr-Land| Oberösterreich| 4521| Österreich
+Oberösterreich,4864,Attersee,200,1,628452,47.9143904,13.5356091,place,village,Attersee| Vöcklabruck| Oberösterreich| Österreich
+Oberösterreich,?,Palmsdorf,200,2,1007488,47.9222403,13.5145745,place,village,Palmsdorf| Vöcklabruck| Oberösterreich| Österreich
+Oberösterreich,4292,Kefermarkt,200,1,151147221,48.4429634,14.5383884,boundary,administrative,Kefermarkt| Freistadt| Oberösterreich| 4292| Österreich
+Oberösterreich,5121,Ostermiething,200,1,151218918,48.0459363,12.8303402,boundary,administrative,Ostermiething| Braunau am Inn| Oberösterreich| 5121| Österreich
+Oberösterreich,?,Ernsting,200,1,636985,48.0502169,12.8516702,place,hamlet,Ernsting| Braunau am Inn| Oberösterreich| Österreich
+Oberösterreich,4690,Schwanenstadt,200,1,151145811,48.0545249,13.7749232,boundary,administrative,Schwanenstadt| Vöcklabruck| Oberösterreich| 4690| Österreich
+Oberösterreich,?,Bergern,200,8,645551,48.1020037,13.6313841,place,hamlet,Bergern| Vöcklabruck| Oberösterreich| Österreich
+Oberösterreich,4600,Wels,200,2,151324009,48.1566957,14.0244047,boundary,administrative,Wels| Oberösterreich| 4600| Österreich
+Oberösterreich,5280,Braunau am Inn,200,2,151145757,48.253136,13.039506,boundary,administrative,Braunau am Inn| Oberösterreich| 5280| Österreich
+Oberösterreich,4873,Frankenburg,200,2,151146911,48.0680308,13.4921448,boundary,administrative,Frankenburg| Vöcklabruck| Oberösterreich| 4873| Österreich
+Oberösterreich,?,Vordersteining,200,1,634807,48.0905244,13.4874492,place,hamlet,Vordersteining| Vöcklabruck| Oberösterreich| Österreich
+Oberösterreich,4580,Windischgarsten,200,1,151247058,47.7218417,14.3289935,boundary,administrative,Windischgarsten| Kirchdorf an der Krems| Oberösterreich| 4580| Österreich
+Oberösterreich,4860,Lenzing,200,1,151146936,47.9733296,13.6049039,boundary,administrative,Lenzing| Vöcklabruck| Oberösterreich| 4860| Österreich
+Oberösterreich,4550,Kremsmünster,200,1,151142282,48.0533652,14.128766,boundary,administrative,Kremsmünster| Kirchdorf an der Krems| Oberösterreich| 4550| Österreich
+Oberösterreich,4400,Steyr,200,1,151240101,48.0390046,14.4191276,boundary,administrative,Steyr| Steyr (Stadt)| Oberösterreich| 4400| Österreich
+Oberösterreich,4100,Ottensheim,200,1,151145111,48.3318812,14.1757273,boundary,administrative,Ottensheim| Urfahr-Umgebung| Oberösterreich| 4100| Österreich
+Oberösterreich,4642,Sattledt,200,1,151142954,48.0702992,14.0581292,boundary,administrative,Sattledt| Wels-Land| Oberösterreich| 4642| Österreich
+Salzburg,5020,Salzburg,200,2,151381372,47.8001977,13.0410592,place,city,Salzburg| Bezirk Salzburg| Salzburg| 5020| Österreich
+Salzburg,5162,Obertrum,200,1,151145140,47.9380101,13.0752378,boundary,administrative,Obertrum am See| Salzburg-Umgebung| Salzburg| 5162| Österreich
+Salzburg,5400,Hallein-Kaltenhausen,200,0,?,?,?,?,?,?
+Salzburg,?,Kaltenhausen,200,0,?,?,?,?,?,?
+Salzburg,5072,Siezenheim,200,1,642511,47.8105684,12.9854864,place,village,Siezenheim| Salzburg-Umgebung| Salzburg| Österreich
+Salzburg,5082,Grödig,200,1,626321,47.7401445,13.0394938,place,village,Grödig| Salzburg-Umgebung| Salzburg| Österreich
+Salzburg,5102,Anthering bei Salzburg,200,0,?,?,?,?,?,?
+Salzburg,?,Acharting,200,1,634818,47.8916504,12.995714,place,village,Acharting| Salzburg-Umgebung| Salzburg| Österreich
+Salzburg,5324,Faistenau,200,1,645853,47.7767374,13.2320181,place,village,Faistenau| Salzburg-Umgebung| Salzburg| Österreich
+Salzburg,5730,Mittersill,200,1,151257335,47.2815157,12.4837012,boundary,administrative,Mittersill| Zell am See| Salzburg| 5730| Österreich
+Salzburg,5662,Bruck an der Glocknerstraße,200,1,151258055,47.29043295,12.8440179020417,boundary,administrative,Bruck a.d. Glocknerstraße| Zell am See| Salzburg| 5662|5671| Österreich
+Salzburg,?,Niederhof,200,1,7856457,47.2781021,12.8483625,place,hamlet,Niederhof| Zell am See| Salzburg| Österreich
+Salzburg,5661,Rauris,200,1,633467,47.2290446,12.9949295,place,town,Rauris| Zell am See| Salzburg| Österreich
+Salzburg,5630,Bad Hofgastein,200,1,4825606,47.1703104,13.1060635,place,town,Bad Hofgastein| Sankt Johann im Pongau| Salzburg| Österreich
+Salzburg,?,Wieden,200,2,547555,47.1849166,13.0921921,place,village,Wieden| Sankt Johann im Pongau| Salzburg| Österreich
+Salzburg,5700,Zell am See,200,2,151254310,47.3239539,12.7962369,boundary,administrative,Zell am See| Salzburg| 5700| Österreich
+Salzburg,?,Bruckberg,200,1,8957820,47.2975911,12.781189,place,suburb,Bruckberg| Zell am See| Salzburg| 5700| Österreich
+Salzburg,5151,Nussdorf,200,0,?,?,?,?,?,?
+Tirol,6175,Unterperfuß/Innsbruck,200,1,151253053,47.2596685,11.2575503,boundary,administrative,Unterperfuss| Innsbruck Land| Tirol| 6178| Österreich
+Tirol,?,Unterperfuß,200,1,151253053,47.2596685,11.2575503,boundary,administrative,Unterperfuss| Innsbruck Land| Tirol| 6178| Österreich
+Tirol,6020,Innsbruck,200,1,213786,47.2654296,11.3927685,place,city,Innsbruck| Bezirk Innsbruck-Stadt| Tirol| Österreich
+Tirol,6464,Tarrenz,200,1,151253526,47.2618485,10.7623191,boundary,administrative,Tarrenz| Imst| Tirol| 6464| Österreich
+Tirol,?,Griesegg,200,0,?,?,?,?,?,?
+Tirol,6236,Alpbach,200,1,151244869,47.398816,11.9434513,boundary,administrative,Alpbach| Kufstein| Tirol| 6236| Österreich
+Tirol,6682,Vils,200,1,151131362,47.5482935,10.6307847,boundary,administrative,Vils| Reutte (Außerfern)| Tirol| 6682| Österreich
+Tirol,9900,Lienz,200,3,151167584,46.8298662,12.7681269,boundary,administrative,Lienz| Tirol| 9900| Österreich
+Tirol,6280,Zell am Ziller,200,1,151144685,47.2333511,11.8835869,boundary,administrative,Zell am Ziller| Schwaz| Tirol| 6280| Österreich
+Tirol,6380,St. Johann,200,0,?,?,?,?,?,?
+Tirol,?,Sankt Johann,200,0,?,?,?,?,?,?
+Tirol,?,Sankt Johann in Tirol,200,1,151144923,47.5224141,12.4286809,boundary,administrative,Sankt Johann in Tirol| Kitzbühel| Tirol| 6380| Österreich
+Tirol,6213,Pertisau,200,1,16940735,47.4400701,11.6990088,place,village,Pertisau| Schwaz| Tirol| Österreich
+Tirol,6067,Absam,200,1,151253131,47.2965003,11.5051409,boundary,administrative,Absam| Innsbruck Land| Tirol| 6067| Österreich
+Tirol,6240,Rattenberg,200,1,151216569,47.4398841,11.8941106,boundary,administrative,Rattenberg| Kufstein| Tirol| 6240| Österreich
+Tirol,6167,Neustift i. Stubaital,200,2,151144191,47.1106408,11.307579,boundary,administrative,Neustift im Stubaital| Innsbruck Land| Tirol| 6167| Österreich
+Tirol,6622,Rinnen/Berwang,200,1,646929,47.4047378,10.7175985,place,village,Rinnen| Reutte (Außerfern)| Tirol| Österreich
+Tirol,?,Rinnen,200,1,646929,47.4047378,10.7175985,place,village,Rinnen| Reutte (Außerfern)| Tirol| Österreich
+Tirol,6344,Walchsee/Kaiserwinkl,200,0,?,?,?,?,?,?
+Tirol,?,Walchsee,200,1,151145545,47.6518614,12.32007,boundary,administrative,Walchsee| Kufstein| Tirol| 6344| Österreich
+Tirol,6385,Schwendt,200,2,151145521,47.6314632,12.3919925,boundary,administrative,Schwendt| Kitzbühel| Tirol| 6385| Österreich
+Tirol,6293,Tux,200,1,151144559,47.128745,11.69180275,boundary,administrative,Tux| Schwaz| Tirol| 6293| Österreich
+Tirol,?,Lanersbach,200,1,1508472,47.1556656,11.7270064,place,village,Lanersbach| Schwaz| Tirol| Österreich
+Tirol,6460,Imst,200,3,151143516,47.2381536,10.7406982,boundary,administrative,Imst| Tirol| 6460| Österreich
+Tirol,6675,Tannheim,200,1,151131663,47.4986071,10.5178106,boundary,administrative,Tannheim| Reutte (Außerfern)| Tirol| 6675| Österreich
+Tirol,?,Unterhöfen,200,0,?,?,?,?,?,?
+Tirol,6654,Holzgau,200,2,151131317,47.2599296,10.3444179,boundary,administrative,Holzgau| Reutte (Außerfern)| Tirol| 6654| Österreich
+Tirol,6330,Schwoich bei Kufstein,200,0,?,?,?,?,?,?
+Tirol,?,Schwoich,200,1,151257938,47.5444933,12.13974,boundary,administrative,Schwoich| Kufstein| Tirol| Österreich
+Tirol,?,Sonnendorf,200,1,818001,47.5360307,12.1413567,place,hamlet,Sonnendorf| Kufstein| Tirol| Österreich
+Vorarlberg,6863,Egg,200,2,151143591,47.4320489,9.8960043,boundary,administrative,Egg| Bregenz| Vorarlberg| 6863| Österreich
+Vorarlberg,6850,Dornbirn,200,3,151142631,47.4135969,9.7423955,boundary,administrative,Dornbirn| Vorarlberg| 6850| Österreich
+Vorarlberg,6700,Bludenz,200,2,151143425,47.153037,9.8219314,boundary,administrative,Bludenz| Vorarlberg| 6700| Österreich
+Vorarlberg,6820,Frastanz,200,1,151143646,47.2166667,9.6330556,boundary,administrative,Frastanz| Feldkirch| Vorarlberg| 6820| Österreich

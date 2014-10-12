@@ -292,7 +292,7 @@ cache = load_responses( CITIES_OUT_PATH )
 
 
 cities.each_with_index do |city,i|
-  next if i > 4
+  ## next if i > 4
 
   puts "#{i} #{city.name} / #{city.region_name}"
 
