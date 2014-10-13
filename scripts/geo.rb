@@ -10,6 +10,7 @@ puts 'hello from geo'
 
 Continent = WorldDb::Model::Continent
 Country   = WorldDb::Model::Country
+Region    = WorldDb::Model::Region
 City      = WorldDb::Model::City
 
 Brewery   = BeerDb::Model::Brewery
@@ -61,7 +62,7 @@ def load_lat_lng( path )
     city_name        = values[2]
     city_lat         = values[6]
     city_lng         = values[7]
-    
+
     if city_lat == '?' || city_lat.blank? ||
        city_lng == '?' || city_lng.blank? 
       ## skip missing lat/lng
@@ -74,8 +75,8 @@ def load_lat_lng( path )
 end  # method load_lat_lng
 
 
-def build_map()
-  puts 'hello from build_map'
+
+def build_map_for( breweries, path )
 
   cache = load_lat_lng( './geo/at-cities.csv' )
   ## dump for debugging
@@ -84,7 +85,7 @@ def build_map()
   entries = []
 
   i = 0
-  Brewery.order(:id).each do |by|
+  breweries.each do |by|
     i += 1
     ## pp by
     puts " #{i} »#{by.title}«"
@@ -111,12 +112,47 @@ def build_map()
 
   ### write to ./build/at.geojson
 
-  File.open( './build/at.geojson', 'w' ) do |file|
+  File.open( path, 'w' ) do |file|
     file.write JSON.pretty_generate( hash )
   end
 
+end
+
+
+
+def build_map()
+  puts 'hello from build_map'
+
+  at  = Country.find_by_key!( 'at' )
+
+  n  = Region.find_by_key_and_country_id!( 'n',  at.id )
+  o  = Region.find_by_key_and_country_id!( 'o',  at.id )
+  st = Region.find_by_key_and_country_id!( 'st', at.id )
+  s  = Region.find_by_key_and_country_id!( 's',  at.id )
+
+  breweries_at = at.breweries
+  breweries_n  = n.breweries
+  breweries_o  = o.breweries
+  breweries_st = st.breweries
+  breweries_s  = s.breweries
+
+
+  build_map_for( breweries_at, './build/at.geojson' )
+  build_map_for( breweries_n,  './build/n.geojson' )
+  build_map_for( breweries_o,  './build/o.geojson' )
+  build_map_for( breweries_st, './build/st.geojson' )
+  build_map_for( breweries_s,  './build/s.geojson' )
+
 end # method build_map
 
+###
+# note: geojson order is lng/lat !!!!
+#
+# A position is represented by an array of numbers.
+# There must be at least two elements, and may be more.
+# The order of elements must follow x, y, z order
+# (easting, northing, altitude for coordinates in a projected coordinate reference system,
+#  or longitude, latitude, altitude for coordinates in a geographic coordinate reference system).
 
 
 def gen_geojson( brewery, latlng )
@@ -124,15 +160,15 @@ def gen_geojson( brewery, latlng )
     'type' => 'Feature',
     'geometry' => {
         'type' => 'Point',
-        'coordinates' => [ latlng.lat, latlng.lng ]
+        'coordinates' => [ latlng.lng, latlng.lat  ]
     },
     'properties' => {
-        'Name' => brewery.title,
-        'City' => brewery.city.title,
+        'title' => brewery.title,    ## note: use title (pre-defined/standard) name for auto-hover for marker (does it work?)
+        'city'  => brewery.city.title,
         ## 'Province': brewery.city.region.title,
-        'Address' => brewery.address,
+        'address' => brewery.address,   ### use description for auto-hover? (does it work?)
         ## 'Web' => brewery.web, 
-        'Type' => 'Brewery',
+        'type' => 'Brewery',
         'marker-color' => '#ff0000'   ## red
     }
   }
