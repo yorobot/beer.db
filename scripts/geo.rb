@@ -156,6 +156,38 @@ end # method build_map
 
 
 def gen_geojson( brewery, latlng )
+  
+  marker_color = if brewery.l?
+      '#ff0000'     ## red
+    elsif brewery.m?
+      '#0000ff'     ## blue
+    elsif brewery.brewpub?
+      '#ffa500'     ## orange
+    else
+      '#ffd700'     ## gold (yellow-ish)
+    end
+
+  marker_size =  if brewery.l?
+      'large'
+    elsif brewery.m?
+      'medium'
+    elsif brewery.brewpub?
+      'small'
+    else
+      'small'
+    end
+
+  brewery_type = if brewery.l?
+      'berwery (l)'
+    elsif brewery.m?
+      'brewery (m)'
+    elsif brewery.brewpub?
+      'brewpub'
+    else
+      'brewery'
+    end
+
+
   hash = {
     'type' => 'Feature',
     'geometry' => {
@@ -163,13 +195,14 @@ def gen_geojson( brewery, latlng )
         'coordinates' => [ latlng.lng, latlng.lat  ]
     },
     'properties' => {
-        'title' => brewery.title,    ## note: use title (pre-defined/standard) name for auto-hover for marker (does it work?)
-        'city'  => brewery.city.title,
-        ## 'Province': brewery.city.region.title,
-        'address' => brewery.address,   ### use description for auto-hover? (does it work?)
-        ## 'Web' => brewery.web, 
-        'type' => 'Brewery',
-        'marker-color' => '#ff0000'   ## red
+        'title'        => brewery.title,    ## note: use title (pre-defined/standard) name for auto-hover for marker (does it work?)
+        'description'  => brewery.address,   ### use description for auto-hover? (does it work?)
+        'city'         => brewery.city.title,
+        'state'        => brewery.city.region.title.gsub( /\[[^\]]+\]/, '' ).strip,  # NOTE: remove translations e.g. [Viena] etc
+        'web'          => brewery.web, 
+        'type'         => brewery_type,
+        'marker-color' => marker_color,
+        'marker-size'  => marker_size
     }
   }
 
