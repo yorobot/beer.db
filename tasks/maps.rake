@@ -19,3 +19,14 @@ task :maps_de => :env do
 
   puts 'Done.'
 end
+
+
+desc 'generate maps (geojson) for be'
+task :maps_be => :env do
+
+  require './scripts/geo'
+
+  build_map_be()
+
+  puts 'Done.'
+end

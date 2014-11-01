@@ -149,6 +149,7 @@ end
 
 
 task :deletebeer => :env do
+  TagDb.delete!    ## NOTE: also remove taggings/tags
   BeerDb.delete!
 end
 

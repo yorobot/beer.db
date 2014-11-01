@@ -5,49 +5,57 @@
 puts 'hello from cities'
 
 
-
-### model shortcuts
-
-Continent = WorldDb::Model::Continent
-Country   = WorldDb::Model::Country
-Region    = WorldDb::Model::Region
-City      = WorldDb::Model::City
-
-Brewery   = BeerDb::Model::Brewery
-Brand     = BeerDb::Model::Brand
-Beer      = BeerDb::Model::Beer
+require './scripts/models'
 
 
 ################
 ## fix/todo:
 ##    make generic / do NOT hardcode de/bayern etc.
 
-def check_breweries
+def save_cities_for_breweries_for_country( country_code )
 
-  puts "breweries: #{Brewery.count}"
+  cty  = Country.find_by_key!( country_code )
 
-  cities = []
+  breweries = cty.breweries
+
+  puts "breweries: #{breweries.count}"
+
+  states = {}
 
   i = 0
-  Brewery.order(:id).each do |by|
+  breweries.each do |by|
     i += 1
     if by.city.nil?
       puts " **** city missing for entry #{i} »#{by.title}« addr: »#{by.address}«"
     else
       puts "      #{i} »#{by.city.title}« addr: »#{by.address}« cty: »#{by.country.title}«"
+
+      state_name = by.region.title
+      state_name = state_name.sub(/\[[^\]]+\]/, '').strip  ### remove optional translation []
+
+      cities = states[state_name] || []
+
       cities << by.city.title
+
+      states[state_name] = cities
     end
   end
-  
-  cities = cities.uniq   # remove duplicates
-  pp cities
-  
-  
-  File.open( './geo/de-cities-input.txt', 'w' ) do |file|
-    file.puts "- Bayern"
-    file.puts ''
-    cities.each do |city|
-      file.puts city
+
+
+  # remove duplicate (cities)
+  states.each do|k,v|
+    v.uniq!  
+  end
+
+  pp states
+
+  File.open( "./geo/#{country_code}-cities-input.txt", 'w' ) do |file|
+    states.each do |k,cities|
+      file.puts "- #{k}"
+      file.puts ''
+      cities.each do |city|
+        file.puts city
+      end
     end
   end
 

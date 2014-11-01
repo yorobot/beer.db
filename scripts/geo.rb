@@ -5,17 +5,7 @@
 puts 'hello from geo'
 
 
-
-### model shortcuts
-
-Continent = WorldDb::Model::Continent
-Country   = WorldDb::Model::Country
-Region    = WorldDb::Model::Region
-City      = WorldDb::Model::City
-
-Brewery   = BeerDb::Model::Brewery
-Brand     = BeerDb::Model::Brand
-Beer      = BeerDb::Model::Beer
+require './scripts/models'  ### model shortcuts
 
 
 def check_breweries_for_missing_city( breweries, cache )
@@ -161,6 +151,27 @@ def build_map_at
   build_map_for( breweries_s,  './build/s.geojson',  cache )
 
 end # method build_map_at
+
+
+def build_map_be
+  puts 'hello from build_map_be'
+
+  be  = Country.find_by_key!( 'be' )
+
+  breweries_be = be.breweries
+
+  cache = load_lat_lng( './geo/be-cities.csv' )   
+  ## dump for debugging
+  pp cache
+
+  build_map_for( breweries_be, './build/be.geojson', cache )
+
+  ###
+  check_breweries_for_missing_city( breweries_be, cache )
+
+end  # method build_map_de
+
+
 
 ###
 # note: geojson order is lng/lat !!!!
