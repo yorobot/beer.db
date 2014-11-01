@@ -12,7 +12,7 @@ require 'json'
 puts 'hello geo/search'
 
 
-def load_cities( path )
+def load_cities( path, country_code )
   ary = []
   last_region_name = '?'
   File.open( path ).each_line do |line|
@@ -51,13 +51,15 @@ def load_cities( path )
     puts "name=>#{name}<"
     city = City.new
     city.name = name
-    city.region_name = last_region_name
-    city.postal_code = postal_code
+    city.region_name  = last_region_name
+    city.postal_code  = postal_code   ## fix: change to post_code
+    city.country_code = country_code 
     ary << city
   end
 
   ary
 end
+
 
 
 def search_city( city )
@@ -66,7 +68,7 @@ def search_city( city )
   params = {
     format: 'json',
     q: "#{city.name}, #{city.region_name}",
-    countrycodes: 'at'
+    countrycodes: "#{city.country_code}"
   }
 
   query_params = []
@@ -155,13 +157,15 @@ end
 
 class City
   attr_accessor :name
-  attr_accessor :postal_code
+  attr_accessor :postal_code   ### fix: change to post_code !!!
   attr_accessor :region_name  # e.g. bundesland e.g. Wien, Burgendland, etc.
+  attr_accessor :country_code
   
   def initialize
-    @name        = '?'
-    @postal_code = '?'   # note: use(s) string
-    @region_name = '?'
+    @name         = '?'
+    @postal_code  = '?'   # note: use(s) string
+    @region_name  = '?'
+    @country_code = '?'
   end
 end
 
@@ -243,7 +247,7 @@ class CityRecord
 end # class CityRecord
 
 
-def load_responses( path )
+def load_responses( path, country_code )
   hash = {}
 
   return hash  unless File.exists?( path )   ## no file; no need to read in
@@ -254,9 +258,10 @@ def load_responses( path )
     values = line.split(',')
 
     city = City.new
-    city.region_name = values[0]
-    city.postal_code = values[1]
-    city.name        = values[2]
+    city.region_name  = values[0]
+    city.postal_code  = values[1]
+    city.name         = values[2]
+    city.country_code = country_code
 
     res = CityResponse.new( city )
     res.code = values[3]
@@ -279,55 +284,4 @@ def save_responses( path, hash )
 
   end
 end
-
-
-CITIES_IN_PATH  = './geo/at-cities-input.txt'
-CITIES_OUT_PATH = './geo/at-cities.csv'
-
-cities = load_cities( CITIES_IN_PATH )
-pp cities
-
-
-cache = load_responses( CITIES_OUT_PATH )
-
-
-cities.each_with_index do |city,i|
-  ## next if i > 4
-
-  puts "#{i} #{city.name} / #{city.region_name}"
-
-  entry = cache[city.name]
-  if entry
-    puts "entry found; skipping >#{city.name}<"
-  else
-    res = search_city( city )
-    ## pp res
-
-    cache[ city.name ] = res
-
-    sleep( 0.4 )  # wait 400ms
-  end
-end
-
-### reorder cache in order of input file
-
-cache2 = {}
-cities.each do |city|
-  entry = cache[city.name]
-  if entry
-    cache2[city.name] = entry
-  else
-    puts "*** warn: no cache entry found for #{city.name}"
-  end
-  
-  ## todo: delete cache entry; at the end dump entries if any remaing w/ warning
-end
-
-
-cache = cache2  # delete old "unordered" cache
-
-save_responses( CITIES_OUT_PATH, cache )
-
-
-puts 'bye'
 

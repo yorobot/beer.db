@@ -1,12 +1,21 @@
 
-desc 'generate maps (geojson)'
-task :maps => :env do
+desc 'generate maps (geojson) for at'
+task :maps_at => :env do
 
   require './scripts/geo'
 
-  build_map()
+  build_map_at()
 
-  check_breweries_for_missing_city()
+  puts 'Done.'
+end
+
+
+desc 'generate maps (geojson) for at'
+task :maps_de => :env do
+
+  require './scripts/geo'
+
+  build_map_de()
 
   puts 'Done.'
 end

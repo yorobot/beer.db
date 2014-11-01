@@ -18,12 +18,10 @@ Brand     = BeerDb::Model::Brand
 Beer      = BeerDb::Model::Beer
 
 
-def check_breweries_for_missing_city
-
-  cache = load_lat_lng( './geo/at-cities.csv' )
+def check_breweries_for_missing_city( breweries, cache )
 
   i = 0
-  Brewery.order(:id).each do |by|
+  breweries.each do |by|
     i += 1
     if by.city.nil?
       puts " city missing for entry #{i} »#{by.title}«"
@@ -76,11 +74,7 @@ end  # method load_lat_lng
 
 
 
-def build_map_for( breweries, path )
-
-  cache = load_lat_lng( './geo/at-cities.csv' )
-  ## dump for debugging
-  pp cache
+def build_map_for( breweries, path, cache )
 
   entries = []
 
@@ -119,9 +113,29 @@ def build_map_for( breweries, path )
 end
 
 
+def build_map_de
+  puts 'hello from build_map_de'
 
-def build_map()
-  puts 'hello from build_map'
+  de  = Country.find_by_key!( 'de' )
+
+  by  = Region.find_by_key_and_country_id!( 'by',  de.id )
+
+  breweries_by = by.breweries
+
+  cache = load_lat_lng( './geo/de-cities.csv' )   
+  ## dump for debugging
+  pp cache
+
+  build_map_for( breweries_by, './build/by.geojson', cache )
+
+  ###
+  check_breweries_for_missing_city( breweries_by, cache )
+
+end  # method build_map_de
+
+
+def build_map_at
+  puts 'hello from build_map_at'
 
   at  = Country.find_by_key!( 'at' )
 
@@ -136,14 +150,17 @@ def build_map()
   breweries_st = st.breweries
   breweries_s  = s.breweries
 
+  cache = load_lat_lng( './geo/at-cities.csv' )
+  ## dump for debugging
+  pp cache
 
-  build_map_for( breweries_at, './build/at.geojson' )
-  build_map_for( breweries_n,  './build/n.geojson' )
-  build_map_for( breweries_o,  './build/o.geojson' )
-  build_map_for( breweries_st, './build/st.geojson' )
-  build_map_for( breweries_s,  './build/s.geojson' )
+  build_map_for( breweries_at, './build/at.geojson', cache )
+  build_map_for( breweries_n,  './build/n.geojson',  cache )
+  build_map_for( breweries_o,  './build/o.geojson',  cache )
+  build_map_for( breweries_st, './build/st.geojson', cache )
+  build_map_for( breweries_s,  './build/s.geojson',  cache )
 
-end # method build_map
+end # method build_map_at
 
 ###
 # note: geojson order is lng/lat !!!!
@@ -162,9 +179,9 @@ def gen_geojson( brewery, latlng )
     elsif brewery.m?
       '#0000ff'     ## blue
     elsif brewery.brewpub?
-      '#ffa500'     ## orange
+      '#ffd700'      ## gold (yellow-ish)
     else
-      '#ffd700'     ## gold (yellow-ish)
+      '#008000'      ## green  - (small-size brewery)
     end
 
   marker_size =  if brewery.l?
