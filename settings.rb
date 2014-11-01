@@ -22,6 +22,9 @@ IE_INCLUDE_PATH               = "#{OPENBEER_ROOT}/ie-ireland"
 BE_INCLUDE_PATH               = "#{OPENBEER_ROOT}/be-belgium"
 NL_INCLUDE_PATH               = "#{OPENBEER_ROOT}/nl-netherlands"
 
+BY_INCLUDE_PATH               = "#{OPENBEER_ROOT}/by-bayern"
+
+
 CA_INCLUDE_PATH               = "#{OPENBEER_ROOT}/ca-canada"
 US_INCLUDE_PATH               = "#{OPENBEER_ROOT}/us-united-states"
 MX_INCLUDE_PATH               = "#{OPENBEER_ROOT}/mx-mexico"
@@ -41,6 +44,7 @@ settings:
 
   WORLD_INCLUDE_PATH:        #{WORLD_INCLUDE_PATH}
   DE_INCLUDE_PATH:           #{DE_INCLUDE_PATH}
+  BY_INCLUDE_PATH:           #{BY_INCLUDE_PATH}
   AT_INCLUDE_PATH:           #{AT_INCLUDE_PATH}
   CH_INCLUDE_PATH:           #{CH_INCLUDE_PATH}
   CZ_INCLUDE_PATH:           #{CZ_INCLUDE_PATH}

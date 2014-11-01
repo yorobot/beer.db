@@ -5,3 +5,10 @@ task :de => :importbuiltin do
 end
 
 
+##########################################
+##  build bayern (by) / baviria only
+
+task :by => :importbuiltin do
+  BeerDb.read_setup( 'setups/all', BY_INCLUDE_PATH )
+end
+
