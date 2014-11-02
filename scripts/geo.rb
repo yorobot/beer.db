@@ -169,7 +169,29 @@ def build_map_be
   ###
   check_breweries_for_missing_city( breweries_be, cache )
 
-end  # method build_map_de
+end  # method build_map_be
+
+
+def build_map_cz
+  puts 'hello from build_map_cz'
+
+  cz  = Country.find_by_key!( 'cz' )
+
+  breweries_cz = cz.breweries
+
+  cache = load_lat_lng( './geo/cz-cities.csv' )   
+  ## dump for debugging
+  pp cache
+
+  build_map_for( breweries_cz, './build/cz.geojson', cache )
+
+  ###
+  check_breweries_for_missing_city( breweries_cz, cache )
+
+end  # method build_map_cz
+
+
+
 
 
 

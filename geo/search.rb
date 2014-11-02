@@ -12,6 +12,26 @@ require 'json'
 puts 'hello geo/search'
 
 
+## rename (some) states for search
+STATE_MAPPINGS = {
+  ## czech states/regions/kraj
+## 'Praha' => 'Praha',  use 'Hlavní město' why? why not??
+ 'Střední Čechy' => 'Středočeský',
+ 'Jižní Čechy' => 'Jihočeský',
+ 'Plzeň' => 'Plzeňský',
+ 'Karlovy Vary' => 'Karlovarský',
+ 'Ústí nad Labem' => 'Ústecký',
+ 'Liberec' => 'Liberecký',
+ 'Pardubice' => 'Pardubický',
+ 'Jižní Morava' => 'Jihomoravský',
+## 'Vysočina' => 'Vysočina',
+ 'Olomouc' => 'Olomoucký',
+ 'Zlín' => 'Zlínský',
+ 'Moravskoslezsko' => 'Moravskoslezský',
+}
+
+
+
 def load_cities( path, country_code )
   ary = []
   last_region_name = '?'
@@ -31,6 +51,14 @@ def load_cities( path, country_code )
 
     if line =~ /^\s*\-\s*/   # if line starts w/ dash (-) assume its a header (bundesland)
       last_region_name = line.sub('-','').strip  # remove first dash (-) and than all leading n trailing spaces
+
+      new_region_name = STATE_MAPPINGS[ last_region_name ]
+      if new_region_name
+         ## rename
+         puts "  rename state from to '#{last_region_name}' => '#{new_region_name}'"
+         last_region_name = new_region_name
+      end
+
       puts "region_name=>#{last_region_name}"
       next   ## skip header
     end
