@@ -1,0 +1,42 @@
+Praha,?,Praha  - Smíchov,200,0,?,?,?,?,?,?
+Praha,?,Praha  - Braník,200,0,?,?,?,?,?,?
+Praha,?,Praha,200,1,151236100,50.0874401,14.4212556,place,city,Praha| okres Hlavní město Praha| Hlavní město Praha| Praha| Česko
+Střední Čechy,?,Kutná Hora,200,2,151237981,49.9486561,15.2681123,boundary,administrative,Kutná Hora| okres Kutná Hora| Středočeský kraj| Střední Čechy| Česko
+Střední Čechy,?,Nymburk,200,2,151237784,50.186331,15.0417306,boundary,administrative,Nymburk| okres Nymburk| Středočeský kraj| Střední Čechy| Česko
+Střední Čechy,?,Vysoký Chlumec,200,2,151237613,49.6176522,14.3897618,boundary,administrative,Vysoký Chlumec| okres Příbram| Středočeský kraj| Střední Čechy| Česko
+Střední Čechy,?,Klášter Hradiště nad Jizerou,200,2,151233911,50.5234076,14.9447205,boundary,administrative,Klášter Hradiště nad Jizerou| okres Mladá Boleslav| Středočeský kraj| Střední Čechy| Česko
+Střední Čechy,?,Velké Popovice,200,2,151234328,49.9225185,14.6393438,boundary,administrative,Velké Popovice| okres Praha-východ| Středočeský kraj| Střední Čechy| Česko
+Střední Čechy,?,Krušovice,200,2,151238663,50.1717945,13.7760239,boundary,administrative,Krušovice| okres Rakovník| Středočeský kraj| Střední Čechy| Česko
+Jižní Čechy,?,Český Krumlov,200,0,?,?,?,?,?,?
+Jižní Čechy,?,Protivín,200,0,?,?,?,?,?,?
+Jižní Čechy,?,Třeboň,200,0,?,?,?,?,?,?
+Jižní Čechy,?,Strakonice,200,0,?,?,?,?,?,?
+Jižní Čechy,?,České Budějovice,200,0,?,?,?,?,?,?
+Plzeň,?,Chodová Planá,200,0,?,?,?,?,?,?
+Plzeň,?,Plzeň,200,2,151234684,49.7477415,13.3775249,place,city,Plzeň| okres Plzeň-město| Plzeňský kraj| Jihozápad| Česko
+Karlovy Vary,?,Broumov-Olivětín,200,0,?,?,?,?,?,?
+Karlovy Vary,?,Náchod,200,0,?,?,?,?,?,?
+Karlovy Vary,?,Nová Paka,200,0,?,?,?,?,?,?
+Karlovy Vary,?,Trutnov,200,0,?,?,?,?,?,?
+Ústí nad Labem,?,Žatec,200,0,?,?,?,?,?,?
+Ústí nad Labem,?,Ústí nad Labem,200,2,151236367,50.6684322,14.0408798,place,city,Ústí nad Labem| okres Ústí nad Labem| Ústecký kraj| Severozápad| Česko
+Ústí nad Labem,?,Velké Březno,200,0,?,?,?,?,?,?
+Ústí nad Labem,?,Louny,200,0,?,?,?,?,?,?
+Liberec,?,Liberec,200,2,151235272,50.7702648,15.0583947,place,city,Liberec| okres Liberec| Liberecký kraj| Severovýchod| Česko
+Liberec,?,Příšovice,200,2,151235173,50.5781315,15.083897,boundary,administrative,Příšovice| okres Liberec| Liberecký kraj| Severovýchod| Česko
+Pardubice,?,Pardubice,200,2,151236344,50.0410187,15.7765409,place,city,Pardubice| okres Pardubice| Pardubický kraj| Severovýchod| Česko
+Pardubice,?,Polička,200,0,?,?,?,?,?,?
+Pardubice,?,Hlinsko v Čechách,200,0,?,?,?,?,?,?
+Jižní Morava,?,Vyškov,200,0,?,?,?,?,?,?
+Jižní Morava,?,Znojmo,200,0,?,?,?,?,?,?
+Jižní Morava,?,Č. Hora,200,0,?,?,?,?,?,?
+Jižní Morava,?,Brno,200,0,?,?,?,?,?,?
+Vysočina,?,Humpolec,200,2,151237266,49.5418861,15.3586709,boundary,administrative,Humpolec| okres Pelhřimov| Kraj Vysočina| Jihovýchod| Česko
+Vysočina,?,Havlíčkův Brod,200,2,151236946,49.6081171,15.5806362,boundary,administrative,Havlíčkův Brod| okres Havlíčkův Brod| Kraj Vysočina| Jihovýchod| Česko
+Vysočina,?,Jihlava,200,2,151236665,49.396064,15.5903065,boundary,administrative,Jihlava| okres Jihlava| Kraj Vysočina| Jihovýchod| Česko
+Olomouc,?,Hanušovice,200,2,151234659,50.0784174,16.9347166,boundary,administrative,Hanušovice| okres Šumperk| Olomoucký kraj| Střední Morava| Česko
+Olomouc,?,Přerov,200,2,151234476,49.4553775,17.4508621,boundary,administrative,Přerov| okres Přerov| Olomoucký kraj| Střední Morava| Česko
+Olomouc,?,Litovel,200,2,151234966,49.7014789,17.0761064,boundary,administrative,Litovel| okres Olomouc| Olomoucký kraj| Střední Morava| Česko
+Zlín,?,Uherský Brod,200,2,151233883,49.0253139,17.6464437,boundary,administrative,Uherský Brod| okres Uherské Hradiště| Zlínský kraj| Střední Morava| Česko
+Moravskoslezsko,?,Ostrava,200,1,151233526,49.8349139,18.2820084,place,city,Ostrava| okres Ostrava-město| Moravskoslezský kraj| Moravskoslezsko| Česko
+Moravskoslezsko,?,Nošovice,200,2,151234202,49.6606723,18.426381,boundary,administrative,Nošovice| okres Frýdek-Místek| Moravskoslezský kraj| Moravskoslezsko| Česko
