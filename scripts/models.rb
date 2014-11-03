@@ -12,3 +12,4 @@ Brewery   = BeerDb::Model::Brewery
 Brand     = BeerDb::Model::Brand
 Beer      = BeerDb::Model::Beer
 
+

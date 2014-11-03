@@ -25,12 +25,7 @@ puts "[book]   PAGES_DIR: #{PAGES_DIR}"
 
 ### model shortcuts
 
-Continent = WorldDb::Model::Continent
-Country   = WorldDb::Model::Country
-
-Brewery   = BeerDb::Model::Brewery
-Brand     = BeerDb::Model::Brand
-Beer      = BeerDb::Model::Beer
+require_relative 'models'
 
 
 #####
@@ -65,6 +60,39 @@ class Page
     end
   end
 end # class Page
+
+
+def build_book_at( opts={} )
+
+### generate breweries index
+
+  Page.create( 'at-breweries', frontmatter: {
+                            layout: 'book',
+                            title: 'Breweries Index',
+                            permalink: '/at-breweries.html' }) do |page|
+    page.write render_breweries_idx( opts )
+  end
+
+
+  ### generate pages for countries
+
+  country = Country.find_by_key!( 'at')
+
+  beers_count     = country.beers.count
+  breweries_count = country.breweries.count
+  
+  puts "build country page #{country.key}..."
+
+  path = country_to_path( country )
+  puts "path=#{path}"
+  Page.create( path, frontmatter: {
+                       layout:    'book',
+                       title:     "#{country.title} (#{country.code})",
+                       permalink: "/#{country.key}.html" }) do |page|
+    page.write render_country( country, opts )
+  end
+end
+
 
 
 
@@ -183,7 +211,7 @@ book_text += render_toc( inline: true )
 country_count=0
 
 Continent.all.each do |continent|
-  continent.countries.order(:title).each do |country|
+  continent.countries.order(:name).each do |country|
 
     beers_count     = country.beers.count
     breweries_count = country.breweries.count

@@ -18,11 +18,25 @@ end
 
 def brewery_title( brewery )  # brewery title plus synonyms if present
   buf = ''
+
+  ## add (l), (m) or (brewpub) marker
+  ##
+  if brewery.l?
+    buf << '(l) '
+  elsif brewery.m?
+    buf << '(m) '
+  elsif brewery.brewpub?
+    buf << '(brewpub) '
+  else
+    # do nothing
+  end
+
   buf << brewery.title
   if brewery.synonyms.present?
     buf << ' • '
     buf << brewery.synonyms.gsub('|', ' • ')
   end
+
   ## buf << " ‹#{brewery.grade}›"      ### remove? just for debugging ??
   buf
 end

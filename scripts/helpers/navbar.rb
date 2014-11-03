@@ -19,7 +19,12 @@ def regions_navbar_for_country( country )
   country.regions.each do |region|
     buf << ' • '  if region_count > 0
     buf << link_to( region.title, "##{country.key}-#{region.key}" )
-    buf << " _(#{region.breweries.count})_{:.count}"
+    buf << " _(#{region.breweries.count} - "
+      buf << "#{region.breweries.where(prod_l:true).count} l/ "
+      buf << "#{region.breweries.where(prod_m:true).count} m/ "
+      buf << "#{region.breweries.where(prod_l:false,prod_m:false,brewpub:false).count} s/ "
+      buf << "#{region.breweries.where(brewpub:true).count} brewpubs"
+    buf << ")_{:.count}"
     region_count += 1
   end
 
@@ -45,7 +50,7 @@ end
 def cities_navbar_for_region( region )
   buf = ''
   city_count=0
-  region.cities.order(:title).each do |city|
+  region.cities.order(:name).each do |city|
     city_breweries_count = city.breweries.count
     if city_breweries_count > 0
       buf << ' • '  if city_count > 0
