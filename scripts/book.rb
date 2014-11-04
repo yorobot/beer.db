@@ -62,21 +62,21 @@ class Page
 end # class Page
 
 
-def build_book_at( opts={} )
+def build_book_for_country( country_code, opts={} )
+
+  country = Country.find_by_key!( country_code )
 
 ### generate breweries index
 
-  Page.create( 'at-breweries', frontmatter: {
+  Page.create( "#{country.key}-breweries", frontmatter: {
                             layout: 'book',
                             title: 'Breweries Index',
-                            permalink: '/at-breweries.html' }) do |page|
+                            permalink: "/#{country.key}-breweries.html" }) do |page|
     page.write render_breweries_idx( opts )
   end
 
-
   ### generate pages for countries
 
-  country = Country.find_by_key!( 'at')
 
   beers_count     = country.beers.count
   breweries_count = country.breweries.count
