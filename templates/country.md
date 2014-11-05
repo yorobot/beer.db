@@ -2,13 +2,7 @@
    ({{ country.code }})  ++
    -                     ++
    {{ country.beers.count }} Beers, ++
-   {{ country.breweries.count }} Breweries ++
-     ( ++
-      {{ country.breweries.where(prod_l:true).count }} l/ ++
-      {{ country.breweries.where(prod_m:true).count }} m/ ++
-      {{ country.breweries.where(prod_l:false,prod_m:false,brewpub:false).count }} s/ ++
-      {{ country.breweries.where(brewpub:true).count }} brewpubs ++
-     ) ++
+   {{ country.breweries.count }} Breweries
    {: #{{ country.key }} }
 
  .. <!-- add intra-page links for regions here -->
@@ -21,6 +15,8 @@
    if beers_missing_breweries.count > 0
  %}
 
+.. <!-- todo/fix: style as red!!! - use uncategorized beers id ?? -->
+ 
 ### Uncategorized Beers
 
   {{ render_beers( beers_missing_breweries ) }}

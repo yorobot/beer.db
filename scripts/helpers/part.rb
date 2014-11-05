@@ -40,10 +40,19 @@ def render_cities( cities, opts={} )
 end
 
 
+
 def render_breweries( breweries, opts={} )
   buf = ''
   breweries.each do |brewery|
     buf << render_brewery( brewery, opts )
+  end
+  buf
+end
+
+def render_breweries_mini( breweries, opts={} )
+  buf = ''
+  breweries.each do |brewery|
+    buf << render_brewery_mini( brewery, opts )
   end
   buf
 end
@@ -65,8 +74,15 @@ def render_city( city, opts={} )
   render_erb_template( tmpl, binding )
 end
 
+
+
 def render_brewery( brewery, opts={} )
   tmpl       = File.read_utf8( 'templates/shared/_brewery.md' )
+  render_erb_template( tmpl, binding )
+end
+
+def render_brewery_mini( brewery, opts={} )
+  tmpl       = File.read_utf8( 'templates/shared/_brewery-mini.md' )
   render_erb_template( tmpl, binding )
 end
 

@@ -45,6 +45,17 @@ def render_country( country, opts={} )
   quickfix_concat_lines( tmpl.render( binding ) )
 end
 
+def render_country_mini( country, opts={} )
+  tmpl = TextUtils::PageTemplate.read( 'templates/country-mini.md' )
+  quickfix_concat_lines( tmpl.render( binding ) )
+end
+
+def render_country_stats( country, opts={} )
+  tmpl = TextUtils::PageTemplate.read( 'templates/country-stats.md' )
+  quickfix_concat_lines( tmpl.render( binding ) )
+end
+
+
 def render_toc( opts={} )
   tmpl = File.read_utf8( 'templates/toc.md' )
   render_erb_template( tmpl, binding )

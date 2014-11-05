@@ -76,10 +76,6 @@ def build_book_for_country( country_code, opts={} )
   end
 
   ### generate pages for countries
-
-
-  beers_count     = country.beers.count
-  breweries_count = country.breweries.count
   
   puts "build country page #{country.key}..."
 
@@ -91,6 +87,21 @@ def build_book_for_country( country_code, opts={} )
                        permalink: "/#{country.key}.html" }) do |page|
     page.write render_country( country, opts )
   end
+
+  Page.create( "#{country.key}-mini", frontmatter: {
+                       layout:    'book',
+                       title:     "#{country.title} (#{country.code}) - Mini",
+                       permalink: "/#{country.key}-mini.html" }) do |page|
+    page.write render_country_mini( country, opts )
+  end
+
+  Page.create( "#{country.key}-stats", frontmatter: {
+                       layout:    'book',
+                       title:     "#{country.title} (#{country.code}) - Stats",
+                       permalink: "/#{country.key}-stats.html" }) do |page|
+    page.write render_country_stats( country, opts )
+  end
+
 end
 
 
