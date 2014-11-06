@@ -3,6 +3,12 @@ task :at => :importbuiltin do
   BeerDb.read_setup( 'setups/all', AT_INCLUDE_PATH )
 end
 
+### test setup from zip
+task :at_zip => :importbuiltin do
+  BeerDb.read_setup_from_zip( 'at-austria-master', 'setups/all', './build' )
+end
+
+
 task :at_pubs => :importbuiltin do
   BeerDb.read_setup( 'setups/brewpubs', AT_INCLUDE_PATH )
 end

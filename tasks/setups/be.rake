@@ -7,6 +7,13 @@ task :be_vwv => :importbuiltin do
   BeerDb.read_setup( 'setups/vwv', BE_INCLUDE_PATH )
 end
 
+### test setup from zip
+task :be_zip => :importbuiltin do
+  BeerDb.read_setup_from_zip( 'be-belgium-master', 'setups/all', './build' )
+end
+
+
+
 #####
 # export cities for geocoding
 
