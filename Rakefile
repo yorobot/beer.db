@@ -49,7 +49,7 @@ end
 
 
 task :env => BUILD_DIR do
-  ## require 'worlddb'   ### NB: for local testing use rake -I ./lib dev:test e.g. do NOT forget to add -I ./lib
+  require 'worlddb'   ### NB: for local testing use rake -I ./lib dev:test e.g. do NOT forget to add -I ./lib
   require 'beerdb'
   ## require 'worlddb'
   require 'logutils/db'
@@ -106,11 +106,19 @@ task :create => :env do
 end
 
 task :importworld => :configworld do
-  # populate world tables
-  WorldDb.read_setup( 'setups/sport.db.admin', WORLD_DB_INCLUDE_PATH, skip_tags: true )
 
-  ## WorldDb.read_setup( 'setups/all', AUSTRIA_DB_INCLUDE_PATH )
-  WorldDb.read_setup( 'setups/old', AUSTRIA_DB_INCLUDE_PATH )  ## fix: update use states.txt etc.
+  from_zip = true
+
+  if from_zip
+    WorldDb.read_setup_from_zip( 'world.db-master', 'setups/sport.db.admin', './build', skip_tags: true )
+    WorldDb.read_setup_from_zip( 'austria.db-master', 'setups/old', './build' )  ## fix: update use states.txt etc.
+  else
+    # populate world tables
+    WorldDb.read_setup( 'setups/sport.db.admin', WORLD_DB_INCLUDE_PATH, skip_tags: true )
+
+    ## WorldDb.read_setup( 'setups/all', AUSTRIA_DB_INCLUDE_PATH )
+    WorldDb.read_setup( 'setups/old', AUSTRIA_DB_INCLUDE_PATH )  ## fix: update use states.txt etc.
+  end
 end
 
 
