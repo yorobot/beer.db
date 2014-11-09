@@ -107,19 +107,25 @@ end
 
 task :importworld => :configworld do
 
-  from_zip = true
+  from_zip = false
 
   if from_zip
     WorldDb.read_setup_from_zip( 'world.db-master', 'setups/sport.db.admin', './build', skip_tags: true )
-    WorldDb.read_setup_from_zip( 'austria.db-master', 'setups/old', './build' )  ## fix: update use states.txt etc.
+    WorldDb.read_setup_from_zip( 'austria.db-master', 'setups/all', './build' )
   else
     # populate world tables
     WorldDb.read_setup( 'setups/sport.db.admin', WORLD_DB_INCLUDE_PATH, skip_tags: true )
-
-    ## WorldDb.read_setup( 'setups/all', AUSTRIA_DB_INCLUDE_PATH )
-    WorldDb.read_setup( 'setups/old', AUSTRIA_DB_INCLUDE_PATH )  ## fix: update use states.txt etc.
+    WorldDb.read_setup( 'setups/all', AUSTRIA_DB_INCLUDE_PATH )
   end
 end
+
+
+## for testing loading/importing from zip
+task :importat => :configworld do
+  TagDb.delete!    ## NOTE: also remove taggings/tags
+  WorldDb.read_setup_from_zip( 'austria.db-master', 'setups/all', './build' )
+end
+
 
 
 task :importbuiltin => :env do
