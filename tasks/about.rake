@@ -1,6 +1,6 @@
 
 desc 'print versions of gems'
-task :about => :env do
+task :about do
   puts ''
   puts 'gem versions'
   puts '============'

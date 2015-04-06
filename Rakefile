@@ -10,14 +10,19 @@
 #   $ rake -T        - show all tasks
 
 
-
-BUILD_DIR = "./build"
-
 # stdlibs
 require 'yaml'
 require 'erb'
 require 'pp'
 
+# 3rd party libs/gems
+require 'worlddb'         # check/todo: require worlddb/models - why, why not??
+require 'beerdb'          # check/todo: require beerdb/models - why, why not??
+require 'logutils/activerecord'
+
+
+
+BUILD_DIR = "./build"
 
 ## our code
 require './settings'
@@ -49,11 +54,6 @@ end
 
 
 task :env => BUILD_DIR do
-  require 'worlddb'   ### NB: for local testing use rake -I ./lib dev:test e.g. do NOT forget to add -I ./lib
-  require 'beerdb'
-  ## require 'worlddb'
-  require 'logutils/db'
-
   pp DB_CONFIG
   ActiveRecord::Base.establish_connection( DB_CONFIG )
 end
@@ -98,11 +98,7 @@ end
 
 
 task :create => :env do
-  LogDb.create
-  ConfDb.create
-  TagDb.create
-  WorldDb.create
-  BeerDb.create
+  BeerDb.create_all
 end
 
 task :importworld => :configworld do

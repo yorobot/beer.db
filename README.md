@@ -1,5 +1,15 @@
 # build
 
+Note: The recommended and easiest way to build yourself
+your own database copies (e.g. beer.db, franken.db, etc.)
+is using Datafiles.
+See the [`openbeer/datafile`](https://github.com/openbeer/datafile)
+repo for details.
+
+
+
+## Intro
+
 Build scripts for beer.db, etc.
 
 
@@ -11,11 +21,10 @@ Use `rake -T`  to list all available tasks. Example:
 $ rake -T
 ~~~
 
-will print something like:
+Will print something like:
 
 ~~~
 rake about     # print versions of gems
-rake book      # build book (draft version) - The Free World Beer Book
 rake build     # build beer.db from scratch (default)
 rake stats     # print stats for beer.db tables/records
 ~~~
