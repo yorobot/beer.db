@@ -10,7 +10,7 @@ AUSTRIA_DB_INCLUDE_PATH  = "#{OPENMUNDI_ROOT}/austria.db"
 
 # -- beer.db --
 
-OPENBEER_ROOT = ".."
+OPENBEER_ROOT                 = "../../openbeer"
 
 WORLD_INCLUDE_PATH            = "#{OPENBEER_ROOT}/world"
 
